@@ -1,0 +1,24 @@
+timestamp,source_type,source_id,vehicle_count,person_count,total_objects,cars,motorcycles,buses,trucks,bicycles,traffic_level,pedestrian_level
+2025-10-16 00:23:13,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,3,3,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:14,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:15,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,3,3,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:17,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,5,5,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:19,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,4,4,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:20,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:22,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,3,3,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:24,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,6,6,0,0,0,0,0,EMPTY,MODERATE
+2025-10-16 00:23:25,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,4,4,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:27,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:29,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 00:23:31,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 00:23:32,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 00:23:34,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:36,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:38,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:39,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 00:23:40,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 00:23:42,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 00:23:44,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 00:23:45,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:46,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 00:23:48,youtube,https://www.youtube.com/watch?v=_0wPODlF9wU,0,1,1,0,0,0,0,0,EMPTY,LOW
