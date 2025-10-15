@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { PageTransition } from "@/components/page-transition";
 import { ThemeProvider } from "@/contexts/theme-context";
+import { AuthProvider } from "@/contexts/auth-context";
 import { ThemeWrapper } from "@/components/theme-wrapper";
 import TitleSetter from "@/components/title-setter";
 
@@ -30,12 +31,14 @@ export default function RootLayout({
         className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
       >
         <ThemeProvider>
-          <ThemeWrapper>
-            <TitleSetter />
-            <PageTransition>
-              {children}
-            </PageTransition>
-          </ThemeWrapper>
+          <AuthProvider>
+            <ThemeWrapper>
+              <TitleSetter />
+              <PageTransition>
+                {children}
+              </PageTransition>
+            </ThemeWrapper>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

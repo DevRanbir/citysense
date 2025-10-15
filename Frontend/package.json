@@ -52,6 +52,7 @@
     "cmdk": "1.0.4",
     "date-fns": "4.1.0",
     "embla-carousel-react": "8.5.1",
+    "firebase": "^12.4.0",
     "framer-motion": "^12.23.22",
     "google-maps": "latest",
     "gradient-string": "^3.0.0",

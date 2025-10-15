@@ -13,6 +13,7 @@ import { MultiVehicleDisplay, VehicleStatusIndicator } from "@/components/multi-
 import { VehicleManager, Vehicle as VehicleType } from "@/services/vehicle-manager"
 import StaggeredMenu from '@/components/StaggeredMenu';
 import { PageLoader } from "@/components/page-loader";
+import { ProtectedRoute } from "@/components/protected-route";
 import { useTheme } from "@/contexts/theme-context";
 // Type definitions
 interface DirectionStep {
@@ -1386,8 +1387,9 @@ export default function Home() {
   const passedTrafficLightsRef = useRef<Set<string>>(new Set());
 
   return (
-    <PageLoader>
-      <main className={`flex min-h-screen flex-col ${isDarkMode ? "bg-gray-900 text-gray-100" : ""}`}>
+    <ProtectedRoute>
+      <PageLoader>
+        <main className={`flex min-h-screen flex-col ${isDarkMode ? "bg-gray-900 text-gray-100" : ""}`}>
       <div className="flex flex-1 overflow-hidden">
         <div style={{ height: '100vh', background: '#1a1a1a' }}>
           <StaggeredMenu
@@ -1890,8 +1892,9 @@ export default function Home() {
           {isMapViewFreezed ? 'Free Map Movement' : 'Lock Map View'}
         </button>
       )}
-    </main>
-    </PageLoader>
+      </main>
+      </PageLoader>
+    </ProtectedRoute>
   )
 }
 

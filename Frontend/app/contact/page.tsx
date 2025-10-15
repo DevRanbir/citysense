@@ -10,6 +10,7 @@ import { StaggeredMenu } from "@/components/StaggeredMenu"
 import Lottie from "lottie-react";
 import contactAnimation from "@/components/contact-animation.json" assert { type: "json" };
 import { PageLoader } from "@/components/page-loader";
+import { ProtectedRoute } from "@/components/protected-route";
 import { useTheme } from "@/contexts/theme-context";
 
 import { 
@@ -135,8 +136,9 @@ ${formData.name}`
   ]
 
   return (
-    <PageLoader>
-      <div className={`min-h-screen ${isDarkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"}`} style={{ scrollBehavior: 'smooth' }}>
+    <ProtectedRoute>
+      <PageLoader>
+        <div className={`min-h-screen ${isDarkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"}`} style={{ scrollBehavior: 'smooth' }}>
       
       {/* StaggeredMenu */}
       <div className="fixed top-0 left-0 z-50" style={{ height: '100vh', background: '#1a1a1a' }}>
@@ -472,7 +474,8 @@ ${formData.name}`
           </div>
         </div>
       </footer>
-    </div>
-    </PageLoader>
+      </div>
+      </PageLoader>
+    </ProtectedRoute>
   )
 }

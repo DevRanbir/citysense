@@ -23,9 +23,11 @@ import LiveTrafficChart from "@/components/live-traffic-chart";
 import { ActionButtons } from "@/components/action-buttons";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { PageLoader } from "@/components/page-loader";
+import { ProtectedRoute } from "@/components/protected-route";
 import { useState, useEffect } from "react";
 import { X, Bot } from "lucide-react";
 import { useTheme } from "@/contexts/theme-context";
+import { useAuth } from "@/contexts/auth-context";
 import { RiSparkling2Line } from "@remixicon/react";
 
 // Custom Chatbox Trigger Component
@@ -56,6 +58,7 @@ function ChatboxTrigger({
 
 export default function Page() {
   const { isDarkMode, toggleDarkMode } = useTheme();
+  const { user, logOut } = useAuth();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Default closed
   const [selectedLocation, setSelectedLocation] = useState("Madhya Marg");
   const [showSidebarTrigger, setShowSidebarTrigger] = useState(true);
@@ -262,8 +265,9 @@ export default function Page() {
   };
 
   return (
-    <PageLoader>
-      <div className={`flex min-h-screen ${isDarkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"}`}>
+    <ProtectedRoute>
+      <PageLoader>
+        <div className={`flex min-h-screen ${isDarkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"}`}>
         {/* Main Content */}
         <div className="flex flex-1">   
           <SidebarProvider 
@@ -334,6 +338,26 @@ export default function Page() {
                         className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
                     </div>
+                    {/* User Info and Logout */}
+                    {user && (
+                      <div className="flex items-center gap-2">
+                        <span className={`text-xs font-medium ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                          {user.displayName || user.email}
+                        </span>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={logOut}
+                          className={`text-xs ${
+                            isDarkMode 
+                              ? "bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700" 
+                              : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
+                          }`}
+                        >
+                          Logout
+                        </Button>
+                      </div>
+                    )}
                     <ActionButtons 
                       onExport={handleExport} 
                       hasDateFilter={hasDateFilter}
@@ -394,10 +418,9 @@ export default function Page() {
             </div>
           </SidebarInset>
         </SidebarProvider>
-      </div>
-      
-      
-    </div>
-    </PageLoader>
+        </div>
+        </div>
+      </PageLoader>
+    </ProtectedRoute>
   );
 }
