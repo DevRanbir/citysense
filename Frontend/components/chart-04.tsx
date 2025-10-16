@@ -8,6 +8,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { AggregatedData } from "@/services/firebase-date-filter-service";
 
 // Location-specific noise pollution data
 const locationNoiseData = {
@@ -106,18 +107,45 @@ const chartConfig = {
 
 interface Chart04Props {
   selectedLocation?: string;
+  filteredData?: AggregatedData[];
+  isHistoricalMode?: boolean;
 }
 
-export function Chart04({ selectedLocation = "Madhya Marg" }: Chart04Props) {
-  const noisePollutionData = locationNoiseData[selectedLocation as keyof typeof locationNoiseData] || locationNoiseData["Madhya Marg"];
+export function Chart04({ selectedLocation = "Madhya Marg", filteredData, isHistoricalMode }: Chart04Props) {
+  // Estimate noise level from vehicle count
+  const estimateNoiseLevel = (cars: number): number => {
+    // Simple estimation: more cars = higher noise
+    const baseNoise = 55; // Base ambient noise
+    const carNoise = cars * 3; // Each car adds ~3dB
+    return Math.min(baseNoise + carNoise, 110); // Cap at 110dB
+  };
+
+  let noisePollutionData: any[];
+  
+  if (isHistoricalMode && filteredData && filteredData.length > 0) {
+    // Use filtered historical data
+    noisePollutionData = filteredData.map((data, index) => ({
+      time: data.timestamp.includes(':') ? data.timestamp : `Point ${index + 1}`,
+      level: estimateNoiseLevel(data.averageCars),
+      cars: Math.round(data.averageCars)
+    }));
+  } else {
+    // Use default static data
+    noisePollutionData = locationNoiseData[selectedLocation as keyof typeof locationNoiseData] || locationNoiseData["Madhya Marg"];
+  }
 
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-          Noise Pollution Trend
+          {isHistoricalMode ? 'Noise Level (Historical)' : 'Noise Pollution Trend'}
           <span className="text-sm font-normal text-gray-500 block">
             Location: {selectedLocation}
+            {isHistoricalMode && filteredData && (
+              <span className="ml-2 text-xs text-purple-600 dark:text-purple-400">
+                ({filteredData.length} data points)
+              </span>
+            )}
           </span>
         </CardTitle>
       </CardHeader>
@@ -139,7 +167,7 @@ export function Chart04({ selectedLocation = "Madhya Marg" }: Chart04Props) {
               tickMargin={8}
             />
             <YAxis
-              domain={[0, 120]}
+              domain={[50, 120]}
               tickLine={false}
               axisLine={false}
               tickMargin={8}

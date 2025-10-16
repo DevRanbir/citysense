@@ -5,100 +5,135 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Activity, RefreshCw, CheckCircle, AlertTriangle } from "lucide-react";
+import { firebaseLocationService, FirebaseLocationData } from "@/services/firebase-location-service";
 
 interface WorkingPathwayDashboardProps {
   selectedLocation: string;
 }
 
 export function WorkingPathwayDashboard({ selectedLocation }: WorkingPathwayDashboardProps) {
-  const [isConnected, setIsConnected] = useState(false);
+  const [isConnected, setIsConnected] = useState(true); // Firebase is always connected
   const [data, setData] = useState<any>(null);
   const [updates, setUpdates] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    checkConnection();
-    const interval = setInterval(() => {
-      fetchData(); // Always fetch data, whether connected or not
-    }, 3000); // Faster updates every 3 seconds
-    return () => clearInterval(interval);
-  }, [selectedLocation]);
+  const convertFirebaseDataToDashboard = (firebaseData: FirebaseLocationData) => {
+    // Calculate congestion level based on traffic
+    let congestionLevel = 0;
+    switch (firebaseData.traffic_level) {
+      case 'EMPTY': congestionLevel = 0; break;
+      case 'LOW': congestionLevel = 25; break;
+      case 'MEDIUM': congestionLevel = 50; break;
+      case 'HIGH': congestionLevel = 75; break;
+      case 'CONGESTED': congestionLevel = 100; break;
+      default: congestionLevel = 50;
+    }
 
-  const generateMockData = () => {
+    // Calculate overall score (higher is better)
+    const overallScore = 100 - (congestionLevel * 0.6 + (firebaseData.people / 30) * 40);
+
+    // Estimate AQI based on vehicle count
+    const estimatedAQI = Math.min(200, 50 + (firebaseData.cars * 5) + (firebaseData.people * 2));
+
     return {
       location: selectedLocation,
-      overall_score: Math.floor(Math.random() * 40) + 60,
+      overall_score: Math.max(0, Math.min(100, Math.round(overallScore))),
       traffic: {
-        status: ['Heavy', 'Moderate', 'Smooth'][Math.floor(Math.random() * 3)],
-        congestion_level: Math.floor(Math.random() * 30) + 60,
-        vehicle_count: Math.floor(Math.random() * 10000) + 5000,
+        status: firebaseData.traffic_level,
+        congestion_level: congestionLevel,
+        vehicle_count: firebaseData.cars + 
+          firebaseData.vehicle_breakdown.motorcycles + 
+          firebaseData.vehicle_breakdown.buses + 
+          firebaseData.vehicle_breakdown.trucks,
       },
       aqi: {
-        aqi: Math.floor(Math.random() * 50) + 100,
-        category: ['Moderate', 'Unhealthy'][Math.floor(Math.random() * 2)],
-        pm2_5: Math.floor(Math.random() * 30) + 80,
+        aqi: Math.round(estimatedAQI),
+        category: estimatedAQI <= 50 ? 'Good' : 
+                  estimatedAQI <= 100 ? 'Moderate' : 
+                  estimatedAQI <= 150 ? 'Unhealthy for Sensitive Groups' : 'Unhealthy',
+        pm2_5: Math.round(estimatedAQI * 0.5),
       },
       crowd: {
-        density: Math.floor(Math.random() * 800) + 400,
-        change_rate: Math.floor(Math.random() * 20) - 10,
+        density: firebaseData.people,
+        change_rate: 0, // Not tracked in current Firebase structure
       },
       response_times: {
-        medical: (Math.random() * 5 + 5).toFixed(1),
-        fire: (Math.random() * 3 + 6).toFixed(1),
-        police: (Math.random() * 4 + 4).toFixed(1),
+        medical: ((100 - overallScore) * 0.1 + 5).toFixed(1),
+        fire: ((100 - overallScore) * 0.08 + 6).toFixed(1),
+        police: ((100 - overallScore) * 0.09 + 4).toFixed(1),
       },
-      last_updated: new Date().toLocaleTimeString(),
+      last_updated: new Date(firebaseData.timestamp).toLocaleTimeString(),
     };
   };
 
-  const checkConnection = async () => {
-    try {
-      const response = await fetch('http://localhost:8000/health');
-      if (response.ok) {
-        setIsConnected(true);
-        setError('');
-        console.log('✅ Pathway backend is running!');
-        fetchData();
-      } else {
+  useEffect(() => {
+    // Fetch initial data immediately
+    const fetchData = () => {
+      firebaseLocationService.getLatestData(selectedLocation).then(firebaseData => {
+        setLoading(false);
+        if (firebaseData) {
+          const dashboardData = convertFirebaseDataToDashboard(firebaseData);
+          setData(dashboardData);
+          setUpdates(prev => prev + 1);
+          setIsConnected(true);
+          setError('');
+          console.log(`✅ Data loaded for ${selectedLocation} at ${new Date().toLocaleTimeString()}`);
+        } else {
+          setError(`No data available for ${selectedLocation}`);
+          setIsConnected(false);
+          console.warn(`⚠️ No data found for ${selectedLocation}`);
+        }
+      }).catch(error => {
+        setLoading(false);
+        setError(`Failed to load data: ${error.message}`);
         setIsConnected(false);
-        setError('Pathway backend not responding');
-        generateMockData();
-      }
-    } catch (err) {
-      setIsConnected(false);
-      setError('Cannot connect to Pathway backend');
-      generateMockData();
-    }
-  };
+        console.error(`❌ Error loading data for ${selectedLocation}:`, error);
+      });
+    };
 
-  const fetchData = async () => {
-    if (loading) return;
-    
     setLoading(true);
-    try {
-      const url = `http://localhost:8000/api/pathway/dashboard/${encodeURIComponent(selectedLocation)}`;
-      console.log('Fetching from:', url);
-      
-      const response = await fetch(url);
-      
-      if (response.ok) {
-        const pathwayData = await response.json();
-        setData(pathwayData);
-        setError('');
-        console.log('✅ Got Pathway data:', pathwayData.location);
-      } else {
-        console.log('❌ Pathway response error:', response.status);
-        const mockData = generateMockData();
-        setData(mockData);
+    fetchData();
+
+    // Auto-refresh every 1 second for true live updates
+    const refreshInterval = setInterval(() => {
+      console.log(`🔄 Auto-refreshing data for ${selectedLocation}...`);
+      fetchData();
+    }, 1000);
+
+    // Subscribe to Firebase real-time updates
+    const unsubscribe = firebaseLocationService.subscribeToLocation(
+      selectedLocation,
+      (firebaseData: FirebaseLocationData | null) => {
+        if (firebaseData) {
+          // Convert Firebase data to dashboard format
+          const dashboardData = convertFirebaseDataToDashboard(firebaseData);
+          setData(dashboardData);
+          setUpdates(prev => prev + 1);
+          setIsConnected(true);
+          setError('');
+          console.log(`🔥 Real-time update received for ${selectedLocation} at ${new Date().toLocaleTimeString()}`);
+        } else {
+          setError(`No real-time data for ${selectedLocation}`);
+        }
       }
-    } catch (err) {
-      console.log('❌ Fetch error:', err);
-      const mockData = generateMockData();
-      setData(mockData);
-    }
-    setLoading(false);
-    setUpdates(prev => prev + 1);
+    );
+
+    return () => {
+      clearInterval(refreshInterval);
+      unsubscribe();
+    };
+  }, [selectedLocation]);
+
+  const refreshData = () => {
+    // Force refresh by fetching latest data manually
+    firebaseLocationService.getLatestData(selectedLocation).then(firebaseData => {
+      if (firebaseData) {
+        const dashboardData = convertFirebaseDataToDashboard(firebaseData);
+        setData(dashboardData);
+        setUpdates(prev => prev + 1);
+      }
+    });
   };
 
   const getTrafficStatusColor = (status: string) => {
@@ -116,13 +151,41 @@ export function WorkingPathwayDashboard({ selectedLocation }: WorkingPathwayDash
     return <AlertTriangle className="w-4 h-4 text-red-500" />;
   };
 
-  if (!data) {
+  if (!data && loading) {
     return (
       <Card className="mb-4">
         <CardContent className="p-8 text-center">
           <Activity className="w-12 h-12 text-gray-400 mx-auto mb-4 animate-pulse" />
-          <h3 className="text-lg font-semibold mb-2">Loading Real-Time Data...</h3>
-          <p className="text-gray-600">Connecting to Pathway backend...</p>
+          <h3 className="text-lg font-semibold mb-2">Loading Live Data...</h3>
+          <p className="text-gray-600">Fetching real-time data from {selectedLocation}...</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  if (!data && error) {
+    return (
+      <Card className="mb-4">
+        <CardContent className="p-8 text-center">
+          <AlertTriangle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+          <h3 className="text-lg font-semibold mb-2">No Data Available</h3>
+          <p className="text-gray-600 mb-4">{error}</p>
+          <Button onClick={refreshData} variant="outline">
+            <RefreshCw className="w-4 h-4 mr-2" />
+            Try Again
+          </Button>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  if (!data) {
+    return (
+      <Card className="mb-4">
+        <CardContent className="p-8 text-center">
+          <Activity className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-lg font-semibold mb-2">Initializing...</h3>
+          <p className="text-gray-600">Setting up live feed for {selectedLocation}...</p>
         </CardContent>
       </Card>
     );
@@ -132,20 +195,29 @@ export function WorkingPathwayDashboard({ selectedLocation }: WorkingPathwayDash
     <Card className="mb-4">
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="flex items-center gap-2">
-            <Activity className="w-5 h-5" />
-            Real-Time Reports - {selectedLocation}
-            <Badge className={isConnected ? 'bg-green-500 text-white' : 'bg-yellow-500 text-white'}>
-              {isConnected ? 'PATHWAY LIVE' : 'DEMO MODE'}
-            </Badge>
-          </CardTitle>
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-2">
+              <Activity className="w-5 h-5" />
+              <CardTitle className="flex items-center gap-2">
+                Real-Time Reports - {selectedLocation}
+                <Badge className={isConnected ? 'bg-green-500 text-white' : 'bg-yellow-500 text-white'}>
+                  {isConnected ? 'LIVE' : 'OFFLINE'}
+                </Badge>
+              </CardTitle>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-gray-500">
+              <span>Last updated: {data.last_updated}</span>
+              <span>•</span>
+              <span className="text-green-600 font-medium">Auto-refresh: 1s</span>
+            </div>
+          </div>
           <div className="flex items-center gap-3">
             {getConnectionIcon()}
             <span className="text-sm text-gray-600">
               Updates: {updates}
             </span>
-            <Button size="sm" variant="outline" onClick={fetchData} disabled={loading}>
-              <RefreshCw className="w-4 h-4" />
+            <Button size="sm" variant="outline" onClick={refreshData} disabled={loading}>
+              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             </Button>
           </div>
         </div>

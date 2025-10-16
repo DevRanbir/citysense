@@ -8,6 +8,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { AggregatedData } from "@/services/firebase-date-filter-service";
 
 // Location-specific AQI data
 const locationAQIData = {
@@ -112,18 +113,56 @@ const chartConfig = {
 
 interface Chart02Props {
   selectedLocation?: string;
+  filteredData?: AggregatedData[];
+  isHistoricalMode?: boolean;
 }
 
-export function Chart02({ selectedLocation = "Madhya Marg" }: Chart02Props) {
-  const aqiData = locationAQIData[selectedLocation as keyof typeof locationAQIData] || locationAQIData["Madhya Marg"];
+export function Chart02({ selectedLocation = "Madhya Marg", filteredData, isHistoricalMode }: Chart02Props) {
+  // Estimate AQI from vehicle count (similar to LiveAQIChart)
+  const estimateAQI = (cars: number): number => {
+    // Simple estimation: more cars = higher AQI
+    // This is a simplified model - real AQI would need air quality sensors
+    if (cars < 5) return 50; // Good
+    if (cars < 15) return 100; // Moderate
+    if (cars < 25) return 150; // Unhealthy for Sensitive Groups
+    if (cars < 35) return 200; // Unhealthy
+    return 250; // Very Unhealthy
+  };
+
+  let aqiData: any[];
+  
+  if (isHistoricalMode && filteredData && filteredData.length > 0) {
+    // Use filtered historical data
+    aqiData = filteredData.map((data, index) => ({
+      time: data.timestamp.includes(':') ? data.timestamp : `Point ${index + 1}`,
+      aqi: estimateAQI(data.averageCars),
+      cars: Math.round(data.averageCars),
+      people: Math.round(data.averagePeople)
+    }));
+  } else {
+    // Use default static data
+    aqiData = locationAQIData[selectedLocation as keyof typeof locationAQIData] || locationAQIData["Madhya Marg"];
+  }
+
+  const chartConfig = {
+    aqi: {
+      label: "AQI",
+      color: "hsl(var(--chart-1))",
+    },
+  } satisfies ChartConfig;
 
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-          AQI Trend (24h)
+          {isHistoricalMode ? 'AQI Trend (Historical)' : 'AQI Trend (24h)'}
           <span className="text-sm font-normal text-gray-500 block">
             Location: {selectedLocation}
+            {isHistoricalMode && filteredData && (
+              <span className="ml-2 text-xs text-purple-600 dark:text-purple-400">
+                ({filteredData.length} data points)
+              </span>
+            )}
           </span>
         </CardTitle>
       </CardHeader>
@@ -145,7 +184,7 @@ export function Chart02({ selectedLocation = "Madhya Marg" }: Chart02Props) {
               tickMargin={8}
             />
             <YAxis
-              domain={[0, 200]}
+              domain={[0, 250]}
               tickLine={false}
               axisLine={false}
               tickMargin={8}

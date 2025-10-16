@@ -25,9 +25,20 @@ interface ActionButtonsProps {
   hasDateFilter?: boolean;
   isDarkMode?: boolean;
   toggleDarkMode?: () => void;
+  selectedLocation?: string;
+  onDateRangeChange?: (range: any) => void;
+  onFilterApplied?: (hasFilter: boolean) => void;
 }
 
-export function ActionButtons({ onExport, hasDateFilter = false, isDarkMode, toggleDarkMode }: ActionButtonsProps) {
+export function ActionButtons({ 
+  onExport, 
+  hasDateFilter = false, 
+  isDarkMode, 
+  toggleDarkMode,
+  selectedLocation,
+  onDateRangeChange,
+  onFilterApplied
+}: ActionButtonsProps) {
   const isMobile = useIsMobile();
   const router = useRouter();
   const [isExporting, setIsExporting] = useState(false);
@@ -77,7 +88,11 @@ export function ActionButtons({ onExport, hasDateFilter = false, isDarkMode, tog
   return (
     <div className="flex gap-2 sm:gap-3">
       <div className={`${hasDateFilter ? 'keep-date-picker' : 'no-print'} date-picker`}>
-        <DatePicker />
+        <DatePicker 
+          selectedLocation={selectedLocation}
+          onDateRangeChange={onDateRangeChange}
+          onFilterApplied={onFilterApplied}
+        />
       </div>
       
       {/* Mobile Menu */}

@@ -4,358 +4,313 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { useTheme } from "@/contexts/theme-context";
 import { useAuth } from "@/contexts/auth-context";
-import { Eye, EyeOff, Mail, Lock, User, Sun, Moon, AlertCircle, Phone } from "lucide-react";
+import { Eye, EyeOff, ArrowRight, Search, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ConfirmationResult, RecaptchaVerifier } from "firebase/auth";
 
 export default function SignupPage() {
-  const { isDarkMode, toggleDarkMode } = useTheme();
-  const { signUp, signInWithGoogle, setupRecaptcha, signInWithPhone } = useAuth();
-  const [signupMethod, setSignupMethod] = useState<'email' | 'phone'>('email');
+  const { signUp, user } = useAuth();
+  const router = useRouter();
+  const [userType, setUserType] = useState<'consumer' | 'government'>('consumer');
   
-  // Email signup state
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: ""
-  });
+  // Signup state
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  
-  // Phone signup state
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [otp, setOtp] = useState("");
-  const [showOtpInput, setShowOtpInput] = useState(false);
-  const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
-  const [recaptchaVerifier, setRecaptchaVerifier] = useState<RecaptchaVerifier | null>(null);
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [verificationSent, setVerificationSent] = useState(false);
+  const [checkingVerification, setCheckingVerification] = useState(false);
 
+  // Auto-check verification status every 5 seconds
   useEffect(() => {
-    if (signupMethod === 'phone' && !recaptchaVerifier) {
-      try {
-        const verifier = setupRecaptcha('recaptcha-container');
-        setRecaptchaVerifier(verifier);
-      } catch (err) {
-        console.error("Failed to setup recaptcha:", err);
-      }
+    if (verificationSent && user) {
+      const checkInterval = setInterval(async () => {
+        // Reload user to get latest emailVerified status
+        await user.reload();
+        if (user.emailVerified) {
+          clearInterval(checkInterval);
+          // Store user type in localStorage for onboarding
+          localStorage.setItem('userType', userType);
+          router.push('/onboarding');
+        }
+      }, 5000);
+
+      return () => clearInterval(checkInterval);
     }
-  }, [signupMethod, recaptchaVerifier, setupRecaptcha]);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const validateForm = () => {
-    if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
-      setError("All fields are required");
-      return false;
-    }
-
-    if (formData.password.length < 6) {
-      setError("Password must be at least 6 characters long");
-      return false;
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match");
-      return false;
-    }
-
-    return true;
-  };
+  }, [verificationSent, user, router, userType]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
-    if (!validateForm()) {
+    if (!email || !password || !confirmPassword) {
+      setError("All fields are required");
+      return;
+    }
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    if (!agreeToTerms) {
+      setError("Please agree to the terms and conditions");
       return;
     }
 
     setIsLoading(true);
 
     try {
-      await signUp(formData.email, formData.password, formData.name);
+      // Sign up without display name - will be collected during onboarding
+      await signUp(email, password);
+      setVerificationSent(true);
+      setIsLoading(false);
     } catch (err: any) {
       setError(err.message || "Failed to create account");
       setIsLoading(false);
     }
   };
 
-  const handlePhoneSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleCheckVerification = async () => {
+    setCheckingVerification(true);
     setError("");
-    setIsLoading(true);
 
     try {
-      if (!showOtpInput) {
-        // Send OTP
-        if (!recaptchaVerifier) {
-          throw new Error("Recaptcha not initialized");
+      if (user) {
+        // Reload user to get latest emailVerified status
+        await user.reload();
+        
+        if (user.emailVerified) {
+          // Store user type in localStorage for onboarding
+          localStorage.setItem('userType', userType);
+          // Verified! Redirect to onboarding
+          router.push('/onboarding');
+        } else {
+          setError("Email not verified yet. Please check your inbox and click the verification link.");
         }
-        
-        // Format phone number with country code if not present
-        const formattedPhone = phoneNumber.startsWith('+') ? phoneNumber : `+91${phoneNumber}`;
-        
-        const result = await signInWithPhone(formattedPhone, recaptchaVerifier);
-        setConfirmationResult(result);
-        setShowOtpInput(true);
-        setIsLoading(false);
       } else {
-        // Verify OTP
-        if (!confirmationResult) {
-          throw new Error("No confirmation result");
-        }
-        await confirmationResult.confirm(otp);
-        // Success - will be handled by auth context
+        setError("No user found. Please try signing up again.");
       }
     } catch (err: any) {
-      setError(err.message || "Failed to authenticate with phone");
-      setIsLoading(false);
-    }
-  };
-
-  const handleGoogleSignup = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setError("");
-    setIsLoading(true);
-    try {
-      await signInWithGoogle();
-    } catch (err: any) {
-      const errorMessage = err.message || "Failed to sign up with Google";
-      setError(errorMessage);
-      setIsLoading(false);
+      setError("Failed to check verification status. Please try again.");
+    } finally {
+      setCheckingVerification(false);
     }
   };
 
   return (
-    <div className={`min-h-screen flex items-center justify-center p-4 transition-colors ${
-      isDarkMode ? "bg-gray-900" : "bg-gray-50"
-    }`}>
-      {/* Recaptcha Container */}
-      <div id="recaptcha-container"></div>
-      
-      {/* Theme Toggle Button */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={toggleDarkMode}
-        className={`absolute top-4 right-4 ${
-          isDarkMode ? "text-gray-200 hover:text-white" : "text-gray-700 hover:text-gray-900"
-        }`}
-      >
-        {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-      </Button>
+    <div className="min-h-screen bg-[#E8E8E8] flex flex-col">
+      {/* Header - Pill-shaped Floating Nav */}
+      <header className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="bg-white/95 backdrop-blur-md shadow-lg rounded-full px-8 py-3 flex items-center gap-8">
+          <div className="text-xl font-bold tracking-tight">
+            City<span className="text-lime-500">Sense</span>
+          </div>
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</Link>
+            <Link href="/dashboard" className="text-gray-600 hover:text-gray-900 transition-colors">Dashboard</Link>
+            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
+          </nav>
+          <div className="flex items-center gap-3">
+            <div className="relative hidden lg:block">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder='Search...'
+                className="pl-10 pr-4 py-2 w-48 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lime-400 transition-all"
+              />
+            </div>
+            <Link href="/login">
+              <Button className="bg-lime-400 hover:bg-lime-500 text-black font-medium rounded-full px-5 py-2 text-sm transition-colors">
+                Login
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </header>
 
-      <Card className={`w-full max-w-md ${
-        isDarkMode 
-          ? "bg-gray-800 border-gray-700" 
-          : "bg-white border-gray-200"
-      }`}>
-        <CardHeader className="space-y-1">
-          <CardTitle className={`text-2xl font-bold text-center ${
-            isDarkMode ? "text-white" : "text-gray-900"
-          }`}>
-            Create an Account
-          </CardTitle>
-          <CardDescription className={`text-center ${
-            isDarkMode ? "text-gray-400" : "text-gray-600"
-          }`}>
-            Sign up to get started with CitySense
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {/* Signup Method Tabs */}
-          <div className="flex gap-2 mb-6">
-            <Button
-              type="button"
-              variant={signupMethod === 'email' ? 'default' : 'outline'}
-              className={`flex-1 ${signupMethod === 'email' ? '' : isDarkMode ? 'bg-gray-700 border-gray-600 text-gray-200' : ''}`}
-              onClick={() => {
-                setSignupMethod('email');
-                setError("");
-                setShowOtpInput(false);
-              }}
-            >
-              <Mail className="h-4 w-4 mr-2" />
-              Email
-            </Button>
-            <Button
-              type="button"
-              variant={signupMethod === 'phone' ? 'default' : 'outline'}
-              className={`flex-1 ${signupMethod === 'phone' ? '' : isDarkMode ? 'bg-gray-700 border-gray-600 text-gray-200' : ''}`}
-              onClick={() => {
-                setSignupMethod('phone');
-                setError("");
-                setShowOtpInput(false);
-              }}
-            >
-              <Phone className="h-4 w-4 mr-2" />
-              Phone
-            </Button>
+      {/* Main Content */}
+      <div className="flex-1 flex pt-0">
+        {/* Left Section */}
+        <div className="flex-1 flex flex-col justify-between p-12 lg:p-20">
+          <div className="flex-1 flex flex-col items-center justify-center space-y-12">
+            <div className="space-y-6 pt-5 text-center">
+              <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+                JOIN THE<br />
+                <span className="relative inline-block">
+                  FUTURE
+                  <span className="absolute bottom-1 left-0 w-full h-3 bg-lime-400 -z-10"></span>
+                </span>
+                <br />
+                OF SMART<br />
+                CITIES.
+              </h1>
+              <div className="flex gap-3 mt-8 justify-center">
+                <div className="w-12 h-12 rounded-full bg-lime-400 shadow-lg"></div>
+                <div className="w-12 h-12 rounded-full bg-lime-500 shadow-lg"></div>
+                <div className="w-12 h-12 rounded-full bg-lime-600 shadow-lg"></div>
+              </div>
+            </div>
+
+            {/** Signup header */}
+            <div className="max-w-md mx-auto text-center">
+              <p className="text-xs text-gray-600 tracking-widest font-medium">SMART CITY PLATFORM</p>
+              <h2 className="text-3xl font-bold mt-2 text-gray-900">Create Account</h2>
+              <p className="text-sm text-gray-500 mt-1">Sign up to get started</p>
+            </div>
           </div>
 
-          {/* Email Signup Form */}
-          {signupMethod === 'email' && (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Name Field */}
-              <div className="space-y-2">
-                <Label 
-                  htmlFor="name"
-                  className={isDarkMode ? "text-gray-200" : "text-gray-700"}
-                >
-                  Full Name
-                </Label>
-                <div className="relative">
-                  <User className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 ${
-                    isDarkMode ? "text-gray-400" : "text-gray-500"
-                  }`} />
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="John Doe"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={`pl-10 ${
-                      isDarkMode 
-                        ? "bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" 
-                        : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
-                    }`}
-                    required
-                  />
-                </div>
-              </div>
+        </div>
 
+        {/* Right Section - Signup Card with Background */}
+        <div className="flex-1 relative hidden lg:flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/images/image_0.png')",
+              filter: "brightness(0.85) contrast(1.1)"
+            }}
+          >
+            {/* Overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/60"></div>
+          </div>
+
+          {/* Signup Card */}
+          <div className="relative z-10 bg-white rounded-3xl p-8 mt-20 w-full max-w-md mx-8 shadow-2xl">
+            {!verificationSent ? (
+              <>
+                <div className="mb-6">
+                  <h2 className="text-2xl font-bold text-gray-900">Create your account</h2>
+                  <p className="text-sm text-gray-500 mt-1 capitalize">{userType} Portal</p>
+                </div>
+
+                {/* User Type Toggle */}
+                <div className="flex items-center gap-2 bg-gray-50 rounded-full p-2 mb-6">
+                  <button
+                    type="button"
+                    onClick={() => setUserType('consumer')}
+                    className={`flex-1 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                      userType === 'consumer'
+                        ? 'bg-lime-400 text-black shadow-md'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    Consumer
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setUserType('government')}
+                    className={`flex-1 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                      userType === 'government'
+                        ? 'bg-lime-400 text-black shadow-md'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    Government
+                  </button>
+                </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-5">
               {/* Email Field */}
               <div className="space-y-2">
-                <Label 
-                  htmlFor="email"
-                  className={isDarkMode ? "text-gray-200" : "text-gray-700"}
-                >
+                <Label htmlFor="email" className="text-sm text-gray-700">
                   Email
                 </Label>
-                <div className="relative">
-                  <Mail className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 ${
-                    isDarkMode ? "text-gray-400" : "text-gray-500"
-                  }`} />
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={`pl-10 ${
-                      isDarkMode 
-                        ? "bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" 
-                        : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
-                    }`}
-                    required
-                  />
-                </div>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="your.email@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="h-12 bg-gray-50 border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent"
+                  required
+                />
               </div>
 
               {/* Password Field */}
               <div className="space-y-2">
-                <Label 
-                  htmlFor="password"
-                  className={isDarkMode ? "text-gray-200" : "text-gray-700"}
-                >
+                <Label htmlFor="password" className="text-sm text-gray-700">
                   Password
                 </Label>
                 <div className="relative">
-                  <Lock className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 ${
-                    isDarkMode ? "text-gray-400" : "text-gray-500"
-                  }`} />
                   <Input
                     id="password"
-                    name="password"
                     type={showPassword ? "text" : "password"}
-                    placeholder="••••••••"
-                    value={formData.password}
-                    onChange={handleChange}
-                    className={`pl-10 pr-10 ${
-                      isDarkMode 
-                        ? "bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" 
-                        : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
-                    }`}
+                    placeholder="••••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="h-12 bg-gray-50 border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent pr-10"
                     required
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className={`absolute right-3 top-1/2 transform -translate-y-1/2 ${
-                      isDarkMode ? "text-gray-400 hover:text-gray-300" : "text-gray-500 hover:text-gray-700"
-                    }`}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
                   >
-                    {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
-                    ) : (
-                      <Eye className="h-4 w-4" />
-                    )}
+                    {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
                 </div>
               </div>
 
               {/* Confirm Password Field */}
               <div className="space-y-2">
-                <Label 
-                  htmlFor="confirmPassword"
-                  className={isDarkMode ? "text-gray-200" : "text-gray-700"}
-                >
+                <Label htmlFor="confirmPassword" className="text-sm text-gray-700">
                   Confirm Password
                 </Label>
                 <div className="relative">
-                  <Lock className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 ${
-                    isDarkMode ? "text-gray-400" : "text-gray-500"
-                  }`} />
                   <Input
                     id="confirmPassword"
-                    name="confirmPassword"
                     type={showConfirmPassword ? "text" : "password"}
-                    placeholder="••••••••"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    className={`pl-10 pr-10 ${
-                      isDarkMode 
-                        ? "bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" 
-                        : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
-                    }`}
+                    placeholder="••••••••••"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    className="h-12 bg-gray-50 border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent pr-10"
                     required
                   />
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className={`absolute right-3 top-1/2 transform -translate-y-1/2 ${
-                      isDarkMode ? "text-gray-400 hover:text-gray-300" : "text-gray-500 hover:text-gray-700"
-                    }`}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
                   >
-                    {showConfirmPassword ? (
-                      <EyeOff className="h-4 w-4" />
-                    ) : (
-                      <Eye className="h-4 w-4" />
-                    )}
+                    {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
                 </div>
               </div>
 
+              {/* Terms and Conditions */}
+              <div className="flex items-center gap-2">
+                <input
+                  id="terms"
+                  type="checkbox"
+                  checked={agreeToTerms}
+                  onChange={(e) => setAgreeToTerms(e.target.checked)}
+                  className="w-4 h-4 accent-lime-400 rounded border-gray-300"
+                />
+                <Label htmlFor="terms" className="text-sm text-gray-700 cursor-pointer">
+                  I agree to the{" "}
+                  <Link href="/terms" className="text-gray-900 font-medium hover:underline">
+                    Terms & Conditions
+                  </Link>
+                </Label>
+              </div>
+
               {/* Error Message */}
               {error && (
-                <div className={`flex items-center gap-2 text-sm p-3 rounded-md ${
-                  isDarkMode ? "bg-red-900/20 text-red-400" : "bg-red-50 text-red-600"
-                }`}>
-                  <AlertCircle className="h-4 w-4" />
+                <div className="flex items-center gap-2 text-sm p-3 rounded-xl bg-red-50 text-red-600 border border-red-200">
                   <span>{error}</span>
                 </div>
               )}
@@ -364,185 +319,95 @@ export default function SignupPage() {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full"
+                className="w-full h-12 bg-black hover:bg-gray-800 text-white rounded-xl font-medium transition-colors"
               >
-                {isLoading ? "Creating account..." : "Sign Up"}
+                {isLoading ? "Creating account..." : "Create account"}
               </Button>
             </form>
-          )}
 
-          {/* Phone Signup Form */}
-          {signupMethod === 'phone' && (
-            <form onSubmit={handlePhoneSubmit} className="space-y-4">
-              {!showOtpInput ? (
-                <>
-                  {/* Phone Number Field */}
-                  <div className="space-y-2">
-                    <Label 
-                      htmlFor="phone"
-                      className={isDarkMode ? "text-gray-200" : "text-gray-700"}
-                    >
-                      Phone Number
-                    </Label>
-                    <div className="relative">
-                      <Phone className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 ${
-                        isDarkMode ? "text-gray-400" : "text-gray-500"
-                      }`} />
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="+91 1234567890"
-                        value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
-                        className={`pl-10 ${
-                          isDarkMode 
-                            ? "bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" 
-                            : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
-                        }`}
-                        required
-                      />
-                    </div>
-                    <p className={`text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>
-                      Include country code (e.g., +91 for India)
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* OTP Field */}
-                  <div className="space-y-2">
-                    <Label 
-                      htmlFor="otp"
-                      className={isDarkMode ? "text-gray-200" : "text-gray-700"}
-                    >
-                      Enter OTP
-                    </Label>
-                    <Input
-                      id="otp"
-                      type="text"
-                      placeholder="123456"
-                      value={otp}
-                      onChange={(e) => setOtp(e.target.value)}
-                      className={`${
-                        isDarkMode 
-                          ? "bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" 
-                          : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
-                      }`}
-                      maxLength={6}
-                      required
-                    />
-                    <p className={`text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>
-                      Enter the 6-digit code sent to {phoneNumber}
-                    </p>
-                  </div>
-                </>
-              )}
-
-              {/* Error Message */}
-              {error && (
-                <div className={`flex items-center gap-2 text-sm p-3 rounded-md ${
-                  isDarkMode ? "bg-red-900/20 text-red-400" : "bg-red-50 text-red-600"
-                }`}>
-                  <AlertCircle className="h-4 w-4" />
-                  <span>{error}</span>
+            {/* Footer Links */}
+            <div className="mt-6 text-center space-y-2">
+              <p className="text-sm text-gray-600">
+                Already have an account?{" "}
+                <Link href="/login" className="text-gray-900 font-medium hover:underline">
+                  Sign in
+                  <ArrowRight className="inline h-3 w-3 ml-1" />
+                </Link>
+              </p>
+            </div>
+            </>
+            ) : (
+              /* Verification Sent Message */
+              <div className="text-center py-8">
+                <div className="w-20 h-20 bg-lime-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
                 </div>
-              )}
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Check your email</h2>
+                <p className="text-gray-600 mb-2">
+                  We've sent a verification link to
+                </p>
+                <p className="text-gray-900 font-medium mb-4">{email}</p>
+                <p className="text-sm text-gray-500 mb-6">
+                  Click the link in the email to verify your account. We'll automatically detect when you verify and redirect you to onboarding.
+                </p>
+                
+                {/* Auto-checking indicator */}
+                <div className="flex items-center justify-center gap-2 mb-6 text-sm text-gray-600">
+                  <div className="animate-pulse w-2 h-2 bg-lime-500 rounded-full"></div>
+                  <span>Auto-checking every 5 seconds...</span>
+                </div>
 
-              {/* Submit Button */}
-              <Button
-                type="submit"
-                disabled={isLoading}
-                className="w-full"
-              >
-                {isLoading ? "Processing..." : showOtpInput ? "Verify OTP" : "Send OTP"}
-              </Button>
+                {/* Error Message */}
+                {error && (
+                  <div className="flex items-center gap-2 text-sm p-3 mb-4 rounded-xl bg-red-50 text-red-600 border border-red-200">
+                    <span>{error}</span>
+                  </div>
+                )}
 
-              {showOtpInput && (
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={() => {
-                    setShowOtpInput(false);
-                    setOtp("");
-                    setError("");
-                  }}
-                  className={`w-full ${
-                    isDarkMode 
-                      ? "bg-gray-700 border-gray-600 text-gray-200 hover:bg-gray-600" 
-                      : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
-                  }`}
-                >
-                  Change Phone Number
-                </Button>
-              )}
-            </form>
-          )}
-
-          {/* Divider */}
-          <div className="relative my-6">
-            <div className={`absolute inset-0 flex items-center ${
-              isDarkMode ? "text-gray-600" : "text-gray-400"
-            }`}>
-              <span className="w-full border-t" />
-            </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className={`px-2 ${
-                isDarkMode ? "bg-gray-800 text-gray-400" : "bg-white text-gray-500"
-              }`}>
-                Or continue with
-              </span>
-            </div>
+                <div className="space-y-3">
+                  <Button
+                    onClick={handleCheckVerification}
+                    disabled={checkingVerification}
+                    className="w-full h-12 bg-black hover:bg-gray-800 text-white rounded-xl font-medium transition-colors flex items-center justify-center gap-2"
+                  >
+                    {checkingVerification ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                        Checking...
+                      </>
+                    ) : (
+                      <>
+                        <CheckCircle className="w-4 h-4" />
+                        I have verified
+                      </>
+                    )}
+                  </Button>
+                  
+                  <Button
+                    onClick={() => window.location.reload()}
+                    variant="outline"
+                    className="w-full h-12 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-xl font-medium transition-colors"
+                  >
+                    Resend verification email
+                  </Button>
+                  
+                  <Link href="/login">
+                    <Button
+                      variant="ghost"
+                      className="w-full h-12 text-gray-600 hover:text-gray-900 rounded-xl font-medium transition-colors"
+                    >
+                      Back to login
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* Social Signup Button */}
-          <Button
-            type="button"
-            variant="outline"
-            onClick={handleGoogleSignup}
-            disabled={isLoading}
-            className={`w-full transition-all ${
-              isDarkMode 
-                ? "bg-gray-700 border-gray-600 text-gray-200 hover:bg-gray-600" 
-                : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
-            }`}
-          >
-            <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-              />
-              <path
-                fill="currentColor"
-                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-              />
-              <path
-                fill="currentColor"
-                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-              />
-              <path
-                fill="currentColor"
-                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-              />
-            </svg>
-            Google
-          </Button>
-        </CardContent>
-        <CardFooter>
-          <p className={`text-sm text-center w-full ${
-            isDarkMode ? "text-gray-400" : "text-gray-600"
-          }`}>
-            Already have an account?{" "}
-            <Link 
-              href="/login" 
-              className={`font-medium hover:underline ${
-                isDarkMode ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"
-              }`}
-            >
-              Sign in
-            </Link>
-          </p>
-        </CardFooter>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }

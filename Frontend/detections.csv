@@ -1,0 +1,2531 @@
+timestamp,location,vehicle_count,person_count,total_objects,cars,motorcycles,buses,trucks,bicycles,traffic_level,pedestrian_level
+2025-10-16 04:41:15,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:16,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:17,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:18,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:23,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:24,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:24,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:25,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:26,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:27,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:28,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:28,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:29,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:30,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:30,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:31,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:31,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:41:31,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:32,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:33,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:34,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:35,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:35,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:36,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:36,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:37,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:46,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:47,4 Corners Downtown,3,1,4,2,0,0,1,0,LOW,LOW
+2025-10-16 04:41:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:47,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:48,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:49,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:50,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:51,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:51,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:41:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:52,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:41:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:53,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:54,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:41:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:54,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:41:54,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:55,4 Corners Downtown,6,0,6,5,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:41:56,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:56,4 Corners Downtown,6,0,6,5,0,1,0,0,MEDIUM,EMPTY
+2025-10-16 04:41:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:57,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:57,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:41:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:57,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:41:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:58,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:41:58,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:59,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:41:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:00,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:00,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:01,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:02,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:03,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:03,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:04,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:04,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:05,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:05,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:05,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:06,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:07,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:07,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:07,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:07,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:08,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:08,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:08,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:08,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:09,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:09,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:09,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:09,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:09,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:10,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:10,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:10,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:11,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:11,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:12,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:12,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:12,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:12,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:12,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:13,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:13,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:14,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:14,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:14,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:15,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:15,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:16,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:16,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:16,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:17,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:17,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:17,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:18,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:18,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:19,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:19,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:19,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:20,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:20,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:20,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:21,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:21,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:42:22,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:22,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:22,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:23,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:24,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:24,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:25,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:25,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:25,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:25,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:26,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:26,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:27,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:42:27,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:27,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:27,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:42:28,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:28,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:28,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:28,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:29,Bangkok Thailand,2,1,3,1,0,0,0,1,LOW,LOW
+2025-10-16 04:42:29,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:29,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:29,Bangkok Thailand,2,1,3,1,0,0,0,1,LOW,LOW
+2025-10-16 04:42:30,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:30,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:31,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:31,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:31,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:31,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:32,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:32,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:32,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:33,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:33,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:33,4 Corners Downtown,6,0,6,5,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:42:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:34,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:34,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:35,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:35,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:36,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:36,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:36,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:36,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:37,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:37,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:38,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:38,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:38,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:39,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:39,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:40,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:42:40,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:40,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:40,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:41,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:41,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:42,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:42,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:43,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:43,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:43,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:44,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:44,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:44,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:45,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:46,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:46,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:47,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:47,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:47,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:48,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:48,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:42:48,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:48,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:48,Canmore Alberta,0,3,3,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:49,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:49,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:49,Canmore Alberta,0,3,3,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:49,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:50,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:50,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:50,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:51,4 Corners Downtown,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:51,4 Corners Downtown,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:52,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:52,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:53,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:53,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:54,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:54,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:54,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:42:55,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:55,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:55,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:56,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:57,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:42:57,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:57,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:57,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:58,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:58,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:42:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:58,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:42:59,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:42:59,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:42:59,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:42:59,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:42:59,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:00,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:00,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:00,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:00,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:01,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:02,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:02,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:02,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:02,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:03,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:03,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:03,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:03,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:04,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:04,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:04,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:04,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:04,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:05,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:05,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:05,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:06,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:06,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:06,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:07,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:07,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:07,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:08,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:08,4 Corners Downtown,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:08,Bangkok Thailand,1,3,4,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:08,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:08,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:09,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:09,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:10,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:10,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:10,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:11,4 Corners Downtown,1,2,3,0,0,0,1,0,LOW,LOW
+2025-10-16 04:43:11,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:12,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:12,Bangkok Thailand,2,0,2,1,0,1,0,0,LOW,EMPTY
+2025-10-16 04:43:12,4 Corners Downtown,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:13,Bangkok Thailand,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:43:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:14,Bangkok Thailand,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:43:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:15,4 Corners Downtown,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:15,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:15,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:15,4 Corners Downtown,3,1,4,2,0,0,1,0,LOW,LOW
+2025-10-16 04:43:16,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:16,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:16,4 Corners Downtown,3,1,4,2,0,0,1,0,LOW,LOW
+2025-10-16 04:43:16,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:17,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:17,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:17,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:18,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:18,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:18,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:18,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:19,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:20,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:20,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:20,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:20,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:43:21,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:22,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:23,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:24,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:25,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:25,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:25,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:43:25,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:25,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:26,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:43:26,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:26,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:43:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:27,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:27,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:43:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:27,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:28,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:43:28,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:29,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:29,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:29,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:30,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:30,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:30,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:30,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:31,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:31,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:31,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:43:32,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:32,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:43:32,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:43:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:33,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:33,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:34,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:34,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:35,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:35,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:36,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:36,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:37,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:37,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:38,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:38,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:39,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:40,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:40,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:41,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:41,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:42,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:42,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:42,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:42,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:43,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:43,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:44,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:44,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:44,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:45,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:45,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:46,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:46,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:47,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:47,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:47,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:47,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:43:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:48,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:49,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:49,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:49,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:50,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:51,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:51,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:51,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:52,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:52,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:53,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:54,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:54,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:54,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:55,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:55,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:56,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:56,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:56,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:57,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:58,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:58,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:43:59,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:43:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:43:59,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:00,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:00,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:00,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:01,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:01,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:02,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:02,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:03,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:03,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:04,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:04,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:05,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:06,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:06,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:06,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:44:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:07,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:07,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:08,Bangkok Thailand,3,1,4,2,0,0,0,1,LOW,LOW
+2025-10-16 04:44:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:08,Bangkok Thailand,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:44:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:09,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:09,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:10,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:10,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:11,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:11,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:11,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:11,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:12,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:12,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:12,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:13,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:14,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:14,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:14,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:15,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:15,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:16,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:16,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:17,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:17,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:17,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:18,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:18,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:19,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:19,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:20,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:20,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:20,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:21,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:21,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:21,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:21,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:22,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:22,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:22,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:23,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:24,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:24,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:24,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:25,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:25,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:25,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:25,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:26,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:26,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:26,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:27,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:27,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:27,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:28,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:28,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:28,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:29,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:29,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:29,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:30,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:30,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:30,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:30,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:30,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:31,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:31,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:32,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:32,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:32,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:32,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:32,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:33,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:33,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:33,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:34,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:34,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:34,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:34,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:34,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:35,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:35,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:36,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:36,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:36,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:37,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:37,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:38,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:38,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:39,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:39,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:40,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:40,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:41,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:41,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:42,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:44:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:42,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:42,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:43,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:43,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:43,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:43,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:43,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:44,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:44,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:45,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:46,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:46,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:46,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:46,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:47,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:44:48,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:48,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:48,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:48,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:49,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:50,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:50,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:51,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:52,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:52,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:53,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:53,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:53,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:54,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:54,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:54,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:55,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:55,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:44:55,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:56,4 Corners Downtown,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:44:56,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:56,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:44:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:57,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:57,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:44:57,Koh Samui Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:57,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:58,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:58,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:58,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:44:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:44:59,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:44:59,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:44:59,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:44:59,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:00,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:00,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:45:00,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:00,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:01,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:01,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:03,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:03,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:03,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:04,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:04,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:05,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:05,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:05,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:06,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:06,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:06,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:06,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:06,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:07,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:08,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:08,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:08,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:09,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:09,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:09,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:10,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:10,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:10,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:11,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:11,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:11,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:11,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:45:12,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:13,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:14,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:14,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:45:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:14,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:15,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:15,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:15,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:16,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:16,4 Corners Downtown,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:45:17,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:17,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:17,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:18,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:18,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:18,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:19,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:19,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:19,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:20,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:20,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:21,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:21,4 Corners Downtown,1,1,2,0,0,0,1,0,LOW,LOW
+2025-10-16 04:45:21,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:22,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:22,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:22,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:22,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:23,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:23,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:23,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:24,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:24,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:24,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:25,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:25,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:26,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:45:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:26,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:26,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:27,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:27,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:28,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:28,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:29,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:29,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:30,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:45:31,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:31,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:31,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:31,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:31,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:32,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:32,Koh Samui Thailand,2,1,3,1,0,0,0,1,LOW,LOW
+2025-10-16 04:45:32,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:32,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:32,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:32,Koh Samui Thailand,2,1,3,1,0,0,0,1,LOW,LOW
+2025-10-16 04:45:33,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:45:33,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:33,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:33,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:34,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:34,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:35,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:35,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:36,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:36,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:37,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:37,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:37,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:37,4 Corners Downtown,3,1,4,2,0,1,0,0,LOW,LOW
+2025-10-16 04:45:37,Bangkok Thailand,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:45:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:38,Bangkok Thailand,5,0,5,4,0,1,0,0,MEDIUM,EMPTY
+2025-10-16 04:45:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:39,Bangkok Thailand,5,0,5,4,0,0,0,1,MEDIUM,EMPTY
+2025-10-16 04:45:39,Bangkok Thailand,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:45:40,4 Corners Downtown,3,1,4,2,0,1,0,0,LOW,LOW
+2025-10-16 04:45:40,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:40,4 Corners Downtown,3,1,4,2,0,1,0,0,LOW,LOW
+2025-10-16 04:45:41,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:41,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:41,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:42,Bangkok Thailand,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:45:42,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:42,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:43,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:45:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:43,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:43,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:43,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:44,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:45,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:45,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:46,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:45:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:47,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:45:47,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:49,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:45:49,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:49,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:49,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:50,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:51,4 Corners Downtown,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:51,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:51,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:52,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:52,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:53,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:53,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:53,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:54,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:54,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:55,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:55,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:56,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:56,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:57,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:45:57,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:57,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:45:57,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:57,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:58,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:45:58,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:58,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:45:59,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:45:59,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:45:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:00,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:00,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:00,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:00,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:00,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:01,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:03,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:03,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:03,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:03,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:04,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:04,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:05,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:05,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:05,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:06,4 Corners Downtown,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:06,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:07,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:08,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:08,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:09,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:10,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:10,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:10,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:10,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:10,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:10,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:11,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:11,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:12,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:12,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:12,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:12,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:13,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:13,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:13,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:14,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:14,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:15,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:15,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:15,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:15,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:16,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:16,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:16,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:16,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:17,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:17,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:17,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:18,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:18,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:19,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:19,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:19,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:19,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:20,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:20,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:20,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:21,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:21,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:21,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:21,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:22,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:23,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:23,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:25,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:25,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:25,4 Corners Downtown,7,1,8,6,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:46:25,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:25,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:26,4 Corners Downtown,7,1,8,6,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:46:26,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:26,4 Corners Downtown,7,1,8,7,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:27,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:27,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:27,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:28,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:28,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:28,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:28,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:29,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:29,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:29,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:30,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:30,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:30,Bangkok Thailand,3,3,6,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:30,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:31,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:31,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:31,Bangkok Thailand,3,3,6,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:32,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:32,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:32,Bangkok Thailand,3,3,6,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:32,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:32,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:32,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:33,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:33,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:33,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:34,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:34,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:35,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:35,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:36,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:36,Bangkok Thailand,4,2,6,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:36,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:36,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:36,Bangkok Thailand,5,2,7,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:37,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:37,Bangkok Thailand,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:38,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:38,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:38,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:38,Bangkok Thailand,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:41,Bangkok Thailand,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:41,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:41,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:41,Bangkok Thailand,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:42,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:42,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:42,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:42,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:42,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:43,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:43,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:43,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:43,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:44,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:44,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:44,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:45,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:45,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:46,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:46,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:46:46,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:46,Bangkok Thailand,5,1,6,4,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:46:46,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:47,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:47,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:47,Bangkok Thailand,4,1,5,3,0,1,0,0,MEDIUM,LOW
+2025-10-16 04:46:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:47,Canmore Alberta,0,3,3,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:47,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:47,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:48,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:46:48,Bangkok Thailand,4,1,5,3,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:46:48,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:49,Bangkok Thailand,4,1,5,3,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:46:49,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:46:50,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:46:50,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:51,Bangkok Thailand,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:46:51,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:52,Bangkok Thailand,5,1,6,4,0,1,0,0,MEDIUM,LOW
+2025-10-16 04:46:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:52,Bangkok Thailand,4,1,5,3,0,1,0,0,MEDIUM,LOW
+2025-10-16 04:46:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:53,Bangkok Thailand,3,0,3,1,0,2,0,0,LOW,EMPTY
+2025-10-16 04:46:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:54,Bangkok Thailand,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:54,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:54,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:55,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:56,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:56,Bangkok Thailand,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:46:56,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:57,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:58,Bangkok Thailand,4,2,6,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:46:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:46:58,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:46:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:02,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:02,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:04,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:05,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:05,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:05,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:06,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:06,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:06,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:06,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:07,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:07,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:07,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:07,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:08,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:08,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:08,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:08,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:09,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:09,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:09,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:10,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:10,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:10,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:10,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:11,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:11,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:11,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:11,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:12,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:12,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:13,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:13,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:13,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:13,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:14,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:14,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:15,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:15,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:16,4 Corners Downtown,4,1,5,2,0,0,2,0,MEDIUM,LOW
+2025-10-16 04:47:17,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:17,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:17,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:18,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:18,4 Corners Downtown,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:47:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:19,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:19,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:20,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:20,4 Corners Downtown,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:47:21,4 Corners Downtown,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:47:22,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:22,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:22,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:23,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:23,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:24,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:25,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:25,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:26,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:26,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:27,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:27,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:27,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:27,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:28,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:28,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:28,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:28,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:29,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:29,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:29,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:29,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:30,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:30,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:30,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:31,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:31,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:32,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:33,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:33,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:33,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:34,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:34,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:34,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:35,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:35,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:35,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:35,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:36,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:36,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:37,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:37,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:38,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:38,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:38,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:38,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:39,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:39,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:39,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:40,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:40,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:40,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:40,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:41,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:41,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:41,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:41,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:42,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:43,Bangkok Thailand,4,3,7,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:43,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:43,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:44,Bangkok Thailand,2,2,4,1,0,0,0,1,LOW,LOW
+2025-10-16 04:47:44,Canmore Alberta,0,3,3,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:44,4 Corners Downtown,7,1,8,7,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:44,Bangkok Thailand,1,3,4,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:44,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:45,4 Corners Downtown,6,1,7,5,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:47:45,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:45,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:46,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:46,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:47,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:47,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:48,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:49,4 Corners Downtown,7,1,8,7,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:49,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:49,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:50,Bangkok Thailand,3,3,6,3,0,0,0,0,LOW,LOW
+2025-10-16 04:47:50,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:50,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:47:51,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:51,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:51,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:53,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:54,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:54,Bangkok Thailand,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:47:54,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:55,Bangkok Thailand,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:47:55,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:55,4 Corners Downtown,8,0,8,8,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:55,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:56,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:56,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:56,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:47:57,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:57,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:47:58,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:59,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:47:59,4 Corners Downtown,6,1,7,6,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:47:59,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:00,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:00,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:00,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:00,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:01,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:01,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:02,4 Corners Downtown,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:02,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:02,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:03,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:04,4 Corners Downtown,4,2,6,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:05,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:05,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:06,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:06,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:06,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:07,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:07,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:08,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:08,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:09,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:10,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:10,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:11,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:11,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:11,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:11,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:11,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:12,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:12,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:13,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:13,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:15,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:15,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:48:15,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:16,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:16,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:16,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:48:16,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:17,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:17,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:17,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:48:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:17,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:18,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:18,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:48:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:18,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:18,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:48:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:19,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:20,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:20,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:21,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:21,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:22,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:22,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:22,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:22,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:23,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:24,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:25,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:25,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:26,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:26,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:26,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:27,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:27,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:28,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:28,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:28,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:29,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:30,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:31,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:31,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:31,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:31,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:32,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:32,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:33,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:33,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:33,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:34,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:35,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:36,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:36,4 Corners Downtown,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:48:36,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:37,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:37,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:37,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:37,4 Corners Downtown,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:38,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:38,4 Corners Downtown,5,2,7,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:39,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:39,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:40,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:41,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:41,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:48:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:42,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:42,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:42,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:48:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:42,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:43,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:43,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:48:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:43,4 Corners Downtown,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:43,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:48:43,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:48:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:44,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:48:44,Bangkok Thailand,3,1,4,2,0,1,0,0,LOW,LOW
+2025-10-16 04:48:45,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:46,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:46,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:47,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:47,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:48:47,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:47,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:47,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:48,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:48,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:48,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:48,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:49,Koh Samui Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:48:49,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:50,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:50,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:50,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:51,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:51,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:52,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:52,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:53,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:53,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:54,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:54,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:54,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:54,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:55,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:55,4 Corners Downtown,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:56,4 Corners Downtown,5,1,6,4,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:48:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:56,4 Corners Downtown,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:48:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:57,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:48:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:58,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:59,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:59,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:48:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:48:59,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:00,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:00,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:00,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:49:01,4 Corners Downtown,5,1,6,5,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:49:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:02,4 Corners Downtown,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:49:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:03,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:03,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:04,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:04,4 Corners Downtown,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:49:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:05,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:05,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:05,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:05,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:06,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:07,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:07,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:08,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:08,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:08,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:08,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:09,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:09,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:09,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:10,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:10,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:10,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:10,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:11,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:11,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:12,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:13,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:13,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:14,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:14,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:15,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:15,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:15,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:49:16,4 Corners Downtown,5,0,5,4,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:49:16,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:17,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:18,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:49:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:19,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:19,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:20,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:20,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:20,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:21,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:21,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:22,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:22,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:23,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:25,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:25,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:25,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:25,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:26,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:26,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:27,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:27,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:28,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:29,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:30,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:30,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:30,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:31,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:31,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:31,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:32,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:32,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:33,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:33,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:33,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:34,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:34,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:34,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:35,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:35,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:35,4 Corners Downtown,5,0,5,4,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:49:35,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:35,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:49:36,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:36,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:36,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:37,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:38,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:39,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:39,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:40,Bangkok Thailand,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:49:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:40,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:41,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:41,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:41,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:42,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:42,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:42,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:42,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:43,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:43,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:43,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:43,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:43,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:44,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:44,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:45,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:45,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:49:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:45,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:46,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:46,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:46,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:46,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:46,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:47,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:47,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:47,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:47,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:48,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:48,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:48,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:48,Bangkok Thailand,1,3,4,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:48,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:49,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:50,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:51,Bangkok Thailand,1,3,4,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:51,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:51,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:51,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:51,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:52,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:49:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:52,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:52,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:52,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:53,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:53,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:53,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:53,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:54,4 Corners Downtown,6,0,6,5,0,1,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:54,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:54,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:55,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:55,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:55,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:55,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:49:56,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:56,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:56,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:49:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:56,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:57,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:57,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:57,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:49:58,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:58,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:49:58,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:59,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:59,4 Corners Downtown,5,1,6,4,0,0,1,0,MEDIUM,LOW
+2025-10-16 04:49:59,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:49:59,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:00,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:01,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:01,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:01,Koh Samui Thailand,2,2,4,1,0,0,0,1,LOW,LOW
+2025-10-16 04:50:02,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:02,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:02,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:02,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:03,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:03,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:04,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:04,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:04,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:04,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:05,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:06,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:06,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:07,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:08,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:08,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:08,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:09,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:09,4 Corners Downtown,7,0,7,7,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:10,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:10,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:11,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:11,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:12,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:12,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:12,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:13,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:13,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:13,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:13,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:14,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:14,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:14,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:14,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:14,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:15,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:15,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:15,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:16,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:16,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:16,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:50:17,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:17,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:18,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:18,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:19,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:19,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:19,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:19,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:19,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:20,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:20,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:21,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:22,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:22,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:22,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:23,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:23,Koh Samui Thailand,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:50:24,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:24,Koh Samui Thailand,1,0,1,0,0,1,0,0,LOW,EMPTY
+2025-10-16 04:50:25,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:25,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:25,Koh Samui Thailand,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:50:25,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:26,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:27,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:27,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:27,Koh Samui Thailand,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:50:28,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:29,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:29,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:30,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:30,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:30,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:30,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:31,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:31,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:32,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:32,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:32,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:33,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:33,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:50:34,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:34,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:50:34,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:34,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:35,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:35,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:35,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:35,Koh Samui Thailand,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:35,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:35,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:36,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:36,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:37,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:37,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:37,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:38,Koh Samui Thailand,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:50:38,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:39,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:39,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:40,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:40,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:40,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:41,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:42,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:42,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:50:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:43,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:43,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:44,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:45,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:45,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:45,Bangkok Thailand,3,3,6,2,0,0,0,1,LOW,LOW
+2025-10-16 04:50:46,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:46,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:47,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:48,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:48,Bangkok Thailand,3,1,4,2,0,0,0,1,LOW,LOW
+2025-10-16 04:50:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:49,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:49,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:50,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:50,Bangkok Thailand,4,1,5,3,0,0,0,1,MEDIUM,LOW
+2025-10-16 04:50:50,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:50,Koh Samui Thailand,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:50:51,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:50:51,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:51,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:52,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:53,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:53,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:53,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:54,Bangkok Thailand,1,3,4,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:54,Koh Samui Thailand,2,0,2,1,0,1,0,0,LOW,EMPTY
+2025-10-16 04:50:55,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:55,Koh Samui Thailand,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:50:55,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:55,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:55,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:56,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:56,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:56,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:57,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:57,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:58,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:58,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:58,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:58,Bangkok Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:50:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:59,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:50:59,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:50:59,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:50:59,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:00,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:00,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:00,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:00,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:01,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:01,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:01,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:01,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:01,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:01,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:02,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:03,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:03,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:03,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:03,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:04,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:04,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:04,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:05,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:05,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:06,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:06,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:06,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:51:06,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:07,Bangkok Thailand,4,2,6,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:51:07,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:07,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:07,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:08,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:08,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:08,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:08,Bangkok Thailand,3,3,6,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:08,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:08,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:09,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:09,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:09,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:09,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:09,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:10,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:10,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:10,Bangkok Thailand,4,0,4,3,0,0,0,1,MEDIUM,EMPTY
+2025-10-16 04:51:10,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:11,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:11,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:51:11,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:11,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:12,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:12,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:12,Koh Samui Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:12,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:12,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:12,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:12,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:12,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:13,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:51:13,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:13,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:13,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:14,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:14,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:14,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:14,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:15,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:51:15,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:15,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:15,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:51:16,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:16,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:16,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:16,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:51:17,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:17,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:17,Bangkok Thailand,4,2,6,3,0,0,0,1,MEDIUM,LOW
+2025-10-16 04:51:17,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:17,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:18,Bangkok Thailand,3,3,6,2,0,0,0,1,LOW,LOW
+2025-10-16 04:51:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:18,Bangkok Thailand,3,2,5,2,0,0,0,1,LOW,LOW
+2025-10-16 04:51:19,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:19,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:19,Bangkok Thailand,2,3,5,1,0,0,0,1,LOW,LOW
+2025-10-16 04:51:19,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:20,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:21,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:21,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:21,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:21,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:22,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:22,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:23,Bangkok Thailand,2,4,6,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:23,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:24,4 Corners Downtown,6,0,6,5,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:51:24,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:24,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:24,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:25,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:26,4 Corners Downtown,6,0,6,6,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:27,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:27,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:27,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:28,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:28,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:29,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:29,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:29,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:29,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:29,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:30,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:30,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:31,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:31,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:31,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:31,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:32,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:32,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:51:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:32,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:33,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:33,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:51:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:34,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:34,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:34,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:34,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:34,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:35,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:35,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:35,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:35,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:36,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:36,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:37,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:37,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:37,Bangkok Thailand,2,4,6,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:37,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:38,Koh Samui Thailand,1,3,4,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:38,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:39,Koh Samui Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:39,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:39,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:39,Koh Samui Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:39,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:40,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:41,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:41,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:42,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:42,Koh Samui Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:42,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:42,Koh Samui Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:43,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:43,Koh Samui Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:43,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:44,Koh Samui Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:44,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:44,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:44,Koh Samui Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:45,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:45,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:46,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:46,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:51:47,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:47,Koh Samui Thailand,1,2,3,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:47,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:48,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:51:48,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:48,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:49,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:49,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:49,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:49,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:50,4 Corners Downtown,5,0,5,5,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:50,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:50,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:50,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:50,4 Corners Downtown,5,0,5,4,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:51:51,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:51,4 Corners Downtown,4,0,4,4,0,0,0,0,MEDIUM,EMPTY
+2025-10-16 04:51:52,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:52,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:52,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:53,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:54,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:54,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:55,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:55,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:55,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:55,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:56,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:57,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:57,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:57,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:58,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:58,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:58,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:51:59,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:59,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:51:59,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:51:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:00,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:00,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:00,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:00,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:00,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:01,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:01,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:02,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:03,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:03,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:03,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:04,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:05,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:05,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:05,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:06,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:06,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:07,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:08,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:08,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:08,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:09,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:09,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:10,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:10,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:10,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:11,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:11,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:11,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:11,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:12,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:12,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:13,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:13,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:14,Bangkok Thailand,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:15,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:15,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:16,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:16,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:16,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:16,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:16,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:17,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:18,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:18,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:18,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:19,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:19,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:20,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:20,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:21,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:21,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:21,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:21,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:22,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:22,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:22,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:23,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:23,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:23,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:23,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:23,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:52:24,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:24,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:24,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:24,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:25,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:52:25,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:25,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:26,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:26,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:26,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:26,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:52:26,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:26,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:27,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:52:27,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:27,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:27,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:28,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:52:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:28,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:28,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:52:28,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:28,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:28,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:29,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:29,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:30,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:30,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:30,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:31,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:31,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:31,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:31,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:31,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:32,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:32,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:33,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:33,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:34,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:34,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:34,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:34,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:35,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:36,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:52:36,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:36,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:36,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:37,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:52:37,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:37,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:38,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:39,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:52:39,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:39,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:40,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:41,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:41,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:41,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:42,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:42,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:42,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:43,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:44,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:44,4 Corners Downtown,5,0,5,4,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:52:44,4 Corners Downtown,5,0,5,4,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:52:45,4 Corners Downtown,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:46,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:52:46,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:46,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:46,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:47,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:47,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:48,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:48,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:48,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:49,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:49,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:52:49,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:50,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:50,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:52:51,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:51,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:52,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:52,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:52,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:52,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:53,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:53,Koh Samui Thailand,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:53,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:53,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:53,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:54,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:54,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:54,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:54,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:54,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:55,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:55,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:55,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:52:56,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:56,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:57,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:57,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:57,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:57,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:58,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:58,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:59,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:52:59,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:52:59,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:52:59,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:00,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:01,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:02,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:02,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:02,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:02,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:03,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:03,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:03,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:03,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:03,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:04,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:04,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:04,Bangkok Thailand,4,0,4,3,0,1,0,0,MEDIUM,EMPTY
+2025-10-16 04:53:04,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:05,4 Corners Downtown,2,1,3,1,0,0,1,0,LOW,LOW
+2025-10-16 04:53:05,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:05,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:05,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:05,4 Corners Downtown,5,0,5,4,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:53:06,4 Corners Downtown,4,0,4,2,0,0,2,0,MEDIUM,EMPTY
+2025-10-16 04:53:07,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:53:07,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:07,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:53:07,4 Corners Downtown,4,0,4,3,0,0,1,0,MEDIUM,EMPTY
+2025-10-16 04:53:08,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:08,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:08,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:08,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:09,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:09,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:10,Bangkok Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:10,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:10,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:11,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:12,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:12,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:12,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:12,Bangkok Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:12,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:12,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:13,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:13,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:13,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:13,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:14,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:14,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:14,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:14,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:15,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:15,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:15,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:16,4 Corners Downtown,3,1,4,2,0,0,1,0,LOW,LOW
+2025-10-16 04:53:16,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:16,4 Corners Downtown,3,1,4,2,0,0,1,0,LOW,LOW
+2025-10-16 04:53:16,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:17,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:17,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:17,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:17,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:18,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:18,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:18,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:18,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:18,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:19,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:19,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:19,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:20,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:20,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:20,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:20,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:20,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:21,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:21,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:21,Canmore Alberta,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:22,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:22,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:22,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:22,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:23,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:23,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:23,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:23,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:23,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:24,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:24,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:24,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:24,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:25,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:25,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:25,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:25,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:25,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:25,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:26,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:26,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:27,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:27,4 Corners Downtown,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:27,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:27,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:28,Bangkok Thailand,2,3,5,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:28,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:28,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:28,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:28,Bangkok Thailand,3,3,6,3,0,0,0,0,LOW,LOW
+2025-10-16 04:53:28,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:29,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:29,Bangkok Thailand,3,2,5,3,0,0,0,0,LOW,LOW
+2025-10-16 04:53:29,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:29,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:30,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:30,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:30,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:30,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:30,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:31,4 Corners Downtown,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:31,4 Corners Downtown,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:32,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:33,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:33,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:33,Bangkok Thailand,2,2,4,1,0,0,1,0,LOW,LOW
+2025-10-16 04:53:33,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:33,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:34,Bangkok Thailand,2,2,4,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:34,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:35,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:35,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:36,Bangkok Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:36,4 Corners Downtown,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:36,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:37,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:37,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:38,4 Corners Downtown,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:38,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:38,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:38,4 Corners Downtown,2,0,2,1,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:39,Bangkok Thailand,2,1,3,2,0,0,0,0,LOW,LOW
+2025-10-16 04:53:39,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:39,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:40,Bangkok Thailand,3,1,4,3,0,0,0,0,LOW,LOW
+2025-10-16 04:53:40,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:40,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:40,Bangkok Thailand,4,2,6,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:53:40,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:41,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:41,Bangkok Thailand,4,1,5,4,0,0,0,0,MEDIUM,LOW
+2025-10-16 04:53:41,4 Corners Downtown,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:41,Koh Samui Thailand,2,0,2,2,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:42,4 Corners Downtown,1,0,1,0,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:42,Koh Samui Thailand,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:42,4 Corners Downtown,1,1,2,1,0,0,0,0,LOW,LOW
+2025-10-16 04:53:43,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:43,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:43,Bangkok Thailand,5,0,5,4,0,0,0,1,MEDIUM,EMPTY
+2025-10-16 04:53:43,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:43,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:44,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:44,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:44,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:44,4 Corners Downtown,3,0,3,2,0,0,1,0,LOW,EMPTY
+2025-10-16 04:53:45,Canmore Alberta,0,1,1,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:45,Bangkok Thailand,3,0,3,3,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:45,4 Corners Downtown,0,0,0,0,0,0,0,0,EMPTY,EMPTY
+2025-10-16 04:53:45,Koh Samui Thailand,1,0,1,1,0,0,0,0,LOW,EMPTY
+2025-10-16 04:53:45,Bangkok Thailand,3,2,5,2,0,0,1,0,LOW,LOW
+2025-10-16 04:53:45,Canmore Alberta,0,2,2,0,0,0,0,0,EMPTY,LOW
+2025-10-16 04:53:45,4 Corners Downtown,1,0,1,1,0,0,0,0,LOW,EMPTY

@@ -8,6 +8,7 @@ import {
   ChartTooltip,
 } from "@/components/ui/chart";
 import { useEffect, useState } from "react";
+import { firebaseLocationService, FirebaseLocationData } from "@/services/firebase-location-service";
 
 interface LiveAQIChartProps {
   selectedLocation: string;
@@ -17,26 +18,28 @@ export function LiveAQIChart({ selectedLocation }: LiveAQIChartProps) {
   const [aqiData, setAqiData] = useState<any[]>([]);
 
   useEffect(() => {
-    // Initialize with some historical data, then update with live data
-    const historicalData = [
-      { time: "10:00", aqi: 120 },
-      { time: "10:30", aqi: 135 },
-      { time: "11:00", aqi: 140 },
-      { time: "11:30", aqi: 125 },
-      { time: "12:00", aqi: 130 },
-    ];
-    setAqiData(historicalData);
+    // Initialize with empty data
+    setAqiData([]);
 
-    // Fetch live data every 3 seconds
-    const interval = setInterval(async () => {
-      try {
-        const response = await fetch(`http://localhost:8000/api/pathway/dashboard/${encodeURIComponent(selectedLocation)}`);
-        if (response.ok) {
-          const pathwayData = await response.json();
+    // Subscribe to Firebase real-time updates
+    const unsubscribe = firebaseLocationService.subscribeToLocation(
+      selectedLocation,
+      (data: FirebaseLocationData | null) => {
+        if (data) {
+          // Estimate AQI based on vehicle count (more vehicles = higher pollution)
+          // This is a simplified estimation. In reality, you'd use actual AQI sensors
+          const estimatedAQI = Math.min(200, 50 + (data.cars * 5) + (data.people * 2));
+          
+          const category = 
+            estimatedAQI <= 50 ? 'Good' :
+            estimatedAQI <= 100 ? 'Moderate' :
+            estimatedAQI <= 150 ? 'Unhealthy for Sensitive Groups' :
+            'Unhealthy';
+
           const newValue = {
             time: new Date().toLocaleTimeString().slice(0, 5),
-            aqi: pathwayData.aqi.aqi,
-            category: pathwayData.aqi.category,
+            aqi: Math.round(estimatedAQI),
+            category: category,
           };
           
           setAqiData(prev => {
@@ -44,23 +47,12 @@ export function LiveAQIChart({ selectedLocation }: LiveAQIChartProps) {
             return updated.slice(-8); // Keep only last 8 points
           });
         }
-      } catch (error) {
-        // Generate random data if connection fails
-        const randomAQI = Math.floor(Math.random() * 100) + 80;
-        const newValue = {
-          time: new Date().toLocaleTimeString().slice(0, 5),
-          aqi: randomAQI,
-          category: randomAQI > 150 ? 'Unhealthy' : 'Moderate',
-        };
-        
-        setAqiData(prev => {
-          const updated = [...prev, newValue];
-          return updated.slice(-8);
-        });
       }
-    }, 3000);
+    );
 
-    return () => clearInterval(interval);
+    return () => {
+      unsubscribe();
+    };
   }, [selectedLocation]);
 
   const chartConfig = {

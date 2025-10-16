@@ -14,10 +14,10 @@ import { Chart02 } from "@/components/chart-02";
 import { Chart03 } from "@/components/chart-03";
 import { Chart04 } from "@/components/chart-04";
 import { Chart05 } from "@/components/chart-05";
-import { Chart06 } from "@/components/chart-06";
 import LiveChart02 from "@/components/live-chart-02";
 import LiveDataControls from "@/components/live-data-controls";
 import WorkingPathwayDashboard from "@/components/working-pathway-dashboard";
+import LiveFeed from "@/components/live-feed";
 import LiveAQIChart from "@/components/live-aqi-chart";
 import LiveTrafficChart from "@/components/live-traffic-chart";
 import { ActionButtons } from "@/components/action-buttons";
@@ -29,6 +29,9 @@ import { X, Bot } from "lucide-react";
 import { useTheme } from "@/contexts/theme-context";
 import { useAuth } from "@/contexts/auth-context";
 import { RiSparkling2Line } from "@remixicon/react";
+import { firebaseLocationService, FIREBASE_LOCATIONS, FirebaseLocationData } from "@/services/firebase-location-service";
+import { firebaseDateFilterService, AggregatedData } from "@/services/firebase-date-filter-service";
+import { DateRange } from "react-day-picker";
 
 // Custom Chatbox Trigger Component
 function ChatboxTrigger({ 
@@ -60,25 +63,147 @@ export default function Page() {
   const { isDarkMode, toggleDarkMode } = useTheme();
   const { user, logOut } = useAuth();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Default closed
-  const [selectedLocation, setSelectedLocation] = useState("Madhya Marg");
+  
+  // Get available locations from Firebase
+  const availableLocations = Object.keys(FIREBASE_LOCATIONS);
+  const [selectedLocation, setSelectedLocation] = useState(availableLocations[0] || "Canmore Alberta");
+  
   const [showSidebarTrigger, setShowSidebarTrigger] = useState(true);
   const [hasDateFilter, setHasDateFilter] = useState(false);
   
-  const [useLiveUpdates, setUseLiveUpdates] = useState(false);
-  const [liveData, setLiveData] = useState(null);
+  const [locationData, setLocationData] = useState<FirebaseLocationData | null>(null);
+  const [trafficData, setTrafficData] = useState<Array<{
+    location: string;
+    status: string;
+    dotColor: string;
+  }>>([]);
+  
+  // Date filter state
+  const [dateRange, setDateRange] = useState<DateRange | undefined>();
+  const [selectedHour, setSelectedHour] = useState<number | undefined>();
+  const [filteredData, setFilteredData] = useState<AggregatedData[]>([]);
+  const [isFiltering, setIsFiltering] = useState(false);
+  const [isHistoricalMode, setIsHistoricalMode] = useState(false);
   
   // Touch/swipe state
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-  const trafficData = [
-    { location: "Madhya Marg", status: "Heavy", dotColor: "bg-red-500" },
-    { location: "Dakshin Marg", status: "Moderate", dotColor: "bg-yellow-500" },
-    { location: "Shanti Path", status: "Smooth", dotColor: "bg-green-500" },
-    { location: "Jan Marg", status: "Moderate", dotColor: "bg-yellow-500" },
-    { location: "Vikas Marg", status: "Heavy", dotColor: "bg-red-500" },
-    { location: "Sector 17 Market Road", status: "Smooth", dotColor: "bg-green-500" },
-  ];
+  // Fetch location data from Firebase
+  useEffect(() => {
+    const fetchTrafficData = async () => {
+      const data = await Promise.all(
+        availableLocations.map(async (location) => {
+          const latest = await firebaseLocationService.getLatestData(location);
+          const trafficStatus = latest 
+            ? firebaseLocationService.getTrafficStatus(latest.cars)
+            : { status: 'Unknown', dotColor: 'bg-gray-500' };
+          
+          return {
+            location,
+            status: trafficStatus.status,
+            dotColor: trafficStatus.dotColor
+          };
+        })
+      );
+      setTrafficData(data);
+    };
+
+    fetchTrafficData();
+    
+    // Refresh every 30 seconds
+    const interval = setInterval(fetchTrafficData, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Subscribe to real-time updates for selected location (only when not in historical mode)
+  useEffect(() => {
+    if (isHistoricalMode) return;
+
+    const unsubscribe = firebaseLocationService.subscribeToLocation(
+      selectedLocation,
+      (data) => {
+        setLocationData(data);
+      }
+    );
+
+    return () => {
+      unsubscribe();
+    };
+  }, [selectedLocation, isHistoricalMode]);
+
+  // Handle date range filtering
+  useEffect(() => {
+    const fetchFilteredData = async () => {
+      if (!dateRange?.from || !dateRange?.to) {
+        setFilteredData([]);
+        setIsFiltering(false);
+        setIsHistoricalMode(false);
+        return;
+      }
+
+      setIsFiltering(true);
+      setIsHistoricalMode(true);
+      
+      try {
+        // Check if single day
+        const isSingleDay = dateRange.from.toDateString() === dateRange.to.toDateString();
+        
+        if (isSingleDay) {
+          // Get hourly data for the selected day
+          const hourlyData = await firebaseDateFilterService.getAggregatedByHour(
+            selectedLocation,
+            dateRange.from
+          );
+          
+          // If hour filter is set, filter the hourly data
+          const filtered = selectedHour !== undefined
+            ? hourlyData.filter(d => d.hour === selectedHour)
+            : hourlyData;
+          
+          // Convert HourlyData to AggregatedData format for charts
+          const converted: AggregatedData[] = filtered.map(h => ({
+            timestamp: h.hourLabel,
+            averageCars: h.averageCars,
+            averagePeople: h.averagePeople,
+            maxCars: h.averageCars, // For hourly, use average as max/min
+            maxPeople: h.averagePeople,
+            minCars: h.averageCars,
+            minPeople: h.averagePeople,
+            trafficLevel: h.trafficLevel,
+            pedestrianLevel: 'MEDIUM', // Default
+            dataPoints: h.dataPoints
+          }));
+          
+          setFilteredData(converted);
+          console.log(`📊 Fetched ${converted.length} hours of data for ${selectedLocation}`, 
+            selectedHour !== undefined ? `(filtered to hour ${selectedHour})` : '');
+        } else {
+          // Get daily aggregated data
+          const aggregated = await firebaseDateFilterService.getAggregatedByDay({
+            location: selectedLocation,
+            startDate: dateRange.from,
+            endDate: dateRange.to
+          });
+          
+          setFilteredData(aggregated);
+          console.log(`📊 Fetched ${aggregated.length} days of data for ${selectedLocation}`);
+        }
+      } catch (error) {
+        console.error('Error fetching filtered data:', error);
+        setFilteredData([]);
+      } finally {
+        setIsFiltering(false);
+      }
+    };
+
+    fetchFilteredData();
+  }, [dateRange, selectedHour, selectedLocation]);
+
+  const handleDateRangeChange = (range: DateRange | undefined, hour?: number) => {
+    setDateRange(range);
+    setSelectedHour(hour);
+  };
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -326,18 +451,6 @@ export default function Page() {
                   </div>
                   {/* Right side */}
                   <div className="no-print flex items-center gap-3">
-                    {/* Live Updates Toggle */}
-                    <div className="flex items-center gap-2">
-                      <label className="text-xs font-medium text-gray-600 dark:text-gray-400">
-                        Live Updates
-                      </label>
-                      <input
-                        type="checkbox"
-                        checked={useLiveUpdates}
-                        onChange={(e) => setUseLiveUpdates(e.target.checked)}
-                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                      />
-                    </div>
                     {/* User Info and Logout */}
                     {user && (
                       <div className="flex items-center gap-2">
@@ -363,6 +476,9 @@ export default function Page() {
                       hasDateFilter={hasDateFilter}
                       isDarkMode={isDarkMode}
                       toggleDarkMode={toggleDarkMode}
+                      selectedLocation={selectedLocation}
+                      onDateRangeChange={handleDateRangeChange}
+                      onFilterApplied={handleDateFilterChange}
                     />
                   </div>
                 </header>
@@ -389,29 +505,91 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Real-Time Reports */}
-                {useLiveUpdates && (
+                {/* Real-Time Reports - Only show in live mode */}
+                {!isHistoricalMode && (
                   <div className="mb-4">
                     <WorkingPathwayDashboard selectedLocation={selectedLocation} />
                   </div>
                 )}
 
+                {/* Loading indicator for filtered data */}
+                {isFiltering && (
+                  <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                      <span className="text-sm text-blue-700 dark:text-blue-300">
+                        Loading historical data...
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {/* No data message */}
+                {isHistoricalMode && !isFiltering && filteredData.length === 0 && (
+                  <div className="mb-4 p-6 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg text-center">
+                    <p className="text-sm text-yellow-700 dark:text-yellow-300">
+                      No data available for the selected date range. Please select a different date range.
+                    </p>
+                  </div>
+                )}
+
+                {/* Historical mode indicator */}
+                {isHistoricalMode && filteredData.length > 0 && (
+                  <div className="mb-4 p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-medium text-purple-700 dark:text-purple-300">
+                        📊 Showing historical data: {filteredData.length} data points
+                      </span>
+                      {selectedHour !== undefined && (
+                        <span className="text-xs text-purple-600 dark:text-purple-400">
+                          (Filtered to {selectedHour}:00)
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 <div className="overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 auto-rows-min">
+                    {/* Live Feed - Hide in historical mode */}
+                    {!isHistoricalMode && <LiveFeed selectedLocation={selectedLocation} />}
+                    
+                    {/* Emergency Incidents - Always show */}
                     <Chart01 selectedLocation={selectedLocation} />
-                    {useLiveUpdates ? (
+                    
+                    {/* AQI Chart - Live vs Historical */}
+                    {!isHistoricalMode ? (
                       <LiveAQIChart selectedLocation={selectedLocation} />
                     ) : (
-                      <Chart02 selectedLocation={selectedLocation} />
+                      <Chart02 
+                        selectedLocation={selectedLocation} 
+                        filteredData={filteredData}
+                        isHistoricalMode={isHistoricalMode}
+                      />
                     )}
-                    {useLiveUpdates ? (
+                    
+                    {/* Traffic Chart - Live vs Historical */}
+                    {!isHistoricalMode ? (
                       <LiveTrafficChart selectedLocation={selectedLocation} />
                     ) : (
-                      <Chart03 selectedLocation={selectedLocation} />
+                      <Chart03 
+                        selectedLocation={selectedLocation}
+                        filteredData={filteredData}
+                        isHistoricalMode={isHistoricalMode}
+                      />
                     )}
-                    <Chart04 selectedLocation={selectedLocation} />
-                    <Chart05 selectedLocation={selectedLocation} />
-                    <Chart06 selectedLocation={selectedLocation} />
+                    
+                    {/* Additional Charts with filtered data */}
+                    <Chart04 
+                      selectedLocation={selectedLocation}
+                      filteredData={!isHistoricalMode ? undefined : filteredData}
+                      isHistoricalMode={isHistoricalMode}
+                    />
+                    <Chart05 
+                      selectedLocation={selectedLocation}
+                      filteredData={!isHistoricalMode ? undefined : filteredData}
+                      isHistoricalMode={isHistoricalMode}
+                    />
                   </div>
                 </div>
               </div>

@@ -8,6 +8,7 @@ import {
   ChartTooltip,
 } from "@/components/ui/chart";
 import { useEffect, useState } from "react";
+import { firebaseLocationService, FirebaseLocationData } from "@/services/firebase-location-service";
 
 interface LiveTrafficChartProps {
   selectedLocation: string;
@@ -17,27 +18,41 @@ export function LiveTrafficChart({ selectedLocation }: LiveTrafficChartProps) {
   const [trafficData, setTrafficData] = useState<any[]>([]);
 
   useEffect(() => {
-    // Initialize with some historical data
-    const historicalData = [
-      { time: "10:00", congestion: 65 },
-      { time: "10:30", congestion: 72 },
-      { time: "11:00", congestion: 68 },
-      { time: "11:30", congestion: 75 },
-      { time: "12:00", congestion: 70 },
-    ];
-    setTrafficData(historicalData);
+    // Initialize with empty data
+    setTrafficData([]);
 
-    // Fetch live data every 3 seconds
-    const interval = setInterval(async () => {
-      try {
-        const response = await fetch(`http://localhost:8000/api/pathway/dashboard/${encodeURIComponent(selectedLocation)}`);
-        if (response.ok) {
-          const pathwayData = await response.json();
+    // Subscribe to Firebase real-time updates
+    const unsubscribe = firebaseLocationService.subscribeToLocation(
+      selectedLocation,
+      (data: FirebaseLocationData | null) => {
+        if (data) {
+          // Calculate congestion percentage based on traffic level
+          let congestion = 0;
+          switch (data.traffic_level) {
+            case 'EMPTY':
+              congestion = 0;
+              break;
+            case 'LOW':
+              congestion = 25;
+              break;
+            case 'MEDIUM':
+              congestion = 50;
+              break;
+            case 'HIGH':
+              congestion = 75;
+              break;
+            case 'CONGESTED':
+              congestion = 100;
+              break;
+            default:
+              congestion = 50;
+          }
+
           const newValue = {
             time: new Date().toLocaleTimeString().slice(0, 5),
-            congestion: pathwayData.traffic.congestion_level,
-            status: pathwayData.traffic.status,
-            vehicles: pathwayData.traffic.vehicle_count,
+            congestion: congestion,
+            status: data.traffic_level,
+            vehicles: data.cars,
           };
           
           setTrafficData(prev => {
@@ -45,24 +60,12 @@ export function LiveTrafficChart({ selectedLocation }: LiveTrafficChartProps) {
             return updated.slice(-8); // Keep only last 8 points
           });
         }
-      } catch (error) {
-        // Generate random data if connection fails
-        const randomCongestion = Math.floor(Math.random() * 40) + 40;
-        const newValue = {
-          time: new Date().toLocaleTimeString().slice(0, 5),
-          congestion: randomCongestion,
-          status: randomCongestion > 70 ? 'Heavy' : randomCongestion > 55 ? 'Moderate' : 'Smooth',
-          vehicles: randomCongestion * 150,
-        };
-        
-        setTrafficData(prev => {
-          const updated = [...prev, newValue];
-          return updated.slice(-8);
-        });
       }
-    }, 3000);
+    );
 
-    return () => clearInterval(interval);
+    return () => {
+      unsubscribe();
+    };
   }, [selectedLocation]);
 
   const chartConfig = {

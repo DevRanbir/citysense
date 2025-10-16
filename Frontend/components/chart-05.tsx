@@ -9,6 +9,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { AggregatedData } from "@/services/firebase-date-filter-service";
 
 const locationResponseData = {
   "Madhya Marg": [
@@ -68,18 +69,47 @@ const chartConfig = {
 
 interface Chart05Props {
   selectedLocation?: string;
+  filteredData?: AggregatedData[];
+  isHistoricalMode?: boolean;
 }
 
-export function Chart05({ selectedLocation = "Madhya Marg" }: Chart05Props) {
-  const responseTimeData = locationResponseData[selectedLocation as keyof typeof locationResponseData] || locationResponseData["Madhya Marg"];
+export function Chart05({ selectedLocation = "Madhya Marg", filteredData, isHistoricalMode }: Chart05Props) {
+  let responseTimeData: any[];
+  
+  if (isHistoricalMode && filteredData && filteredData.length > 0) {
+    // Generate average metrics from historical data
+    const totalCars = filteredData.reduce((sum, d) => sum + d.averageCars, 0);
+    const totalPeople = filteredData.reduce((sum, d) => sum + d.averagePeople, 0);
+    const avgCars = totalCars / filteredData.length;
+    const avgPeople = totalPeople / filteredData.length;
+    
+    // Estimate response times based on traffic levels
+    const trafficFactor = avgCars / 10; // Higher traffic = longer times
+    
+    responseTimeData = [
+      { type: "Medical", avgTime: 6 + trafficFactor, target: 8.0 },
+      { type: "Fire", avgTime: 10 + trafficFactor, target: 12.0 },
+      { type: "Police", avgTime: 5 + (trafficFactor * 0.5), target: 7.0 },
+      { type: "Traffic", avgTime: 12 + (trafficFactor * 1.5), target: 15.0 },
+      { type: "Rescue", avgTime: 15 + (trafficFactor * 2), target: 20.0 },
+    ];
+  } else {
+    // Use default static data
+    responseTimeData = locationResponseData[selectedLocation as keyof typeof locationResponseData] || locationResponseData["Madhya Marg"];
+  }
 
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-          Emergency Response Times
+          {isHistoricalMode ? 'Estimated Response Times (Historical)' : 'Emergency Response Times'}
           <span className="text-sm font-normal text-gray-500 block">
             Location: {selectedLocation}
+            {isHistoricalMode && filteredData && (
+              <span className="ml-2 text-xs text-purple-600 dark:text-purple-400">
+                (Based on {filteredData.length} data points)
+              </span>
+            )}
           </span>
         </CardTitle>
       </CardHeader>

@@ -8,6 +8,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { AggregatedData } from "@/services/firebase-date-filter-service";
 
 // Location-specific crowd density data
 const locationCrowdData = {
@@ -136,18 +137,38 @@ const chartConfig = {
 
 interface Chart03Props {
   selectedLocation?: string;
+  filteredData?: AggregatedData[];
+  isHistoricalMode?: boolean;
 }
 
-export function Chart03({ selectedLocation = "Madhya Marg" }: Chart03Props) {
-  const crowdData = locationCrowdData[selectedLocation as keyof typeof locationCrowdData] || locationCrowdData["Madhya Marg"];
+export function Chart03({ selectedLocation = "Madhya Marg", filteredData, isHistoricalMode }: Chart03Props) {
+  let crowdData: any[];
+  
+  if (isHistoricalMode && filteredData && filteredData.length > 0) {
+    // Use filtered historical data - show combined vehicles and pedestrians as "density"
+    crowdData = filteredData.map((data, index) => ({
+      time: data.timestamp.includes(':') ? data.timestamp : `Point ${index + 1}`,
+      density: Math.round(data.averageCars + data.averagePeople),
+      cars: Math.round(data.averageCars),
+      people: Math.round(data.averagePeople)
+    }));
+  } else {
+    // Use default static data
+    crowdData = locationCrowdData[selectedLocation as keyof typeof locationCrowdData] || locationCrowdData["Madhya Marg"];
+  }
 
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-          Crowd Density
+          {isHistoricalMode ? 'Traffic Congestion (Historical)' : 'Crowd Density'}
           <span className="text-sm font-normal text-gray-500 block">
             Location: {selectedLocation}
+            {isHistoricalMode && filteredData && (
+              <span className="ml-2 text-xs text-purple-600 dark:text-purple-400">
+                ({filteredData.length} data points)
+              </span>
+            )}
           </span>
         </CardTitle>
       </CardHeader>
@@ -169,7 +190,7 @@ export function Chart03({ selectedLocation = "Madhya Marg" }: Chart03Props) {
               tickMargin={8}
             />
             <YAxis
-              domain={[0, 1700]}
+              domain={[0, isHistoricalMode ? 'auto' : 1700]}
               tickLine={false}
               axisLine={false}
               tickMargin={8}

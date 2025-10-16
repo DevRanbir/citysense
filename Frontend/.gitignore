@@ -25,3 +25,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+firebase-credentials.json
+citysense-crono-firebase-adminsdk-fbsvc-265a4eb350.json

@@ -14,7 +14,8 @@ import {
   updateProfile,
   RecaptchaVerifier,
   signInWithPhoneNumber,
-  ConfirmationResult
+  ConfirmationResult,
+  sendEmailVerification
 } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
@@ -23,7 +24,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   signIn: (email: string, password: string) => Promise<void>;
-  signUp: (email: string, password: string, displayName: string) => Promise<void>;
+  signUp: (email: string, password: string, displayName?: string) => Promise<void>;
   logOut: () => Promise<void>;
   signInWithGoogle: () => Promise<void>;
   signInWithGithub: () => Promise<void>;
@@ -43,32 +44,59 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
       setLoading(false);
+      
+      // Handle redirect after email verification
+      if (user && user.emailVerified) {
+        // Check if user has completed onboarding (has displayName)
+        if (!user.displayName) {
+          router.push('/onboarding');
+        }
+      }
     });
 
     return unsubscribe;
-  }, []);
+  }, [router]);
 
   const signIn = async (email: string, password: string) => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      router.push('/dashboard');
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      
+      // Check if email is verified
+      if (!userCredential.user.emailVerified) {
+        throw new Error('Please verify your email before signing in. Check your inbox for the verification link.');
+      }
+      
+      // Check if onboarding is complete (has displayName)
+      if (!userCredential.user.displayName) {
+        router.push('/onboarding');
+      } else {
+        router.push('/dashboard');
+      }
     } catch (error: any) {
       throw new Error(error.message);
     }
   };
 
-  const signUp = async (email: string, password: string, displayName: string) => {
+  const signUp = async (email: string, password: string, displayName?: string) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       
-      // Update user profile with display name
+      // Send email verification
       if (userCredential.user) {
-        await updateProfile(userCredential.user, {
-          displayName: displayName
+        await sendEmailVerification(userCredential.user, {
+          url: `${window.location.origin}/onboarding`,
+          handleCodeInApp: true
         });
+        
+        // If displayName is provided, update profile
+        if (displayName) {
+          await updateProfile(userCredential.user, {
+            displayName: displayName
+          });
+        }
       }
       
-      router.push('/dashboard');
+      // Don't redirect - let the component show verification message
     } catch (error: any) {
       throw new Error(error.message);
     }
