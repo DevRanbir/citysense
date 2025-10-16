@@ -4,13 +4,15 @@ import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
 import { Loader } from "@googlemaps/js-api-loader"
+import { FIREBASE_LOCATIONS } from "@/services/firebase-location-service"
 
 interface MapContainerProps {
   children: React.ReactNode
   isDarkMode: boolean
+  selectedLocation?: string
 }
 
-export function MapContainer({ children, isDarkMode }: MapContainerProps) {
+export function MapContainer({ children, isDarkMode, selectedLocation }: MapContainerProps) {
   const mapRef = useRef<HTMLDivElement | null>(null)
   const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null)
   const [isMapLoaded, setIsMapLoaded] = useState(false)
@@ -49,11 +51,16 @@ export function MapContainer({ children, isDarkMode }: MapContainerProps) {
           if (!google) throw new Error('Failed to load Google Maps')
           console.log("Google Maps loaded successfully")
 
-          // Center on Chandigarh, India
-          const chandigarhCenter = { lat: 30.7333, lng: 76.7794 }
+          // Get coordinates for selected location, fallback to Chandigarh
+          const locationConfig = selectedLocation 
+            ? FIREBASE_LOCATIONS[selectedLocation as keyof typeof FIREBASE_LOCATIONS]
+            : null;
+          const mapCenter = locationConfig?.coords || { lat: 30.7333, lng: 76.7794 };
+          
+          console.log(`🗺️ Centering map on ${selectedLocation || 'Chandigarh'} at`, mapCenter);
 
           const map = new google.maps.Map(mapRef.current, {
-            center: chandigarhCenter,
+            center: mapCenter,
             zoom: 13,
             mapTypeControl: false,
             streetViewControl: false,
@@ -146,7 +153,7 @@ export function MapContainer({ children, isDarkMode }: MapContainerProps) {
           // Initialize the startLocation but don't create a marker
           // The marker will only be created when using the RoutePreview component
           if (window) {
-            window.startLocation = chandigarhCenter
+            window.startLocation = mapCenter
           }
 
           // Add the map instance to window for child components to access
@@ -286,6 +293,19 @@ export function MapContainer({ children, isDarkMode }: MapContainerProps) {
       // Don't delete the window.googleMap reference as other components might still need it
     };
   }, [isDarkMode])
+
+  // Recenter map when selectedLocation changes
+  useEffect(() => {
+    if (window.googleMap && selectedLocation) {
+      const locationConfig = FIREBASE_LOCATIONS[selectedLocation as keyof typeof FIREBASE_LOCATIONS];
+      if (locationConfig?.coords) {
+        const newCenter = locationConfig.coords;
+        window.googleMap.panTo(newCenter);
+        window.startLocation = newCenter;
+        console.log(`🗺️ Map recentered to ${selectedLocation} at`, newCenter);
+      }
+    }
+  }, [selectedLocation]);
 
   return (
     <div className="relative h-full w-full">

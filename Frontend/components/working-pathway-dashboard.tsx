@@ -213,9 +213,6 @@ export function WorkingPathwayDashboard({ selectedLocation }: WorkingPathwayDash
           </div>
           <div className="flex items-center gap-3">
             {getConnectionIcon()}
-            <span className="text-sm text-gray-600">
-              Updates: {updates}
-            </span>
             <Button size="sm" variant="outline" onClick={refreshData} disabled={loading}>
               <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             </Button>

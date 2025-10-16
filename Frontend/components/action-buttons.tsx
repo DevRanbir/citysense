@@ -169,26 +169,7 @@ export function ActionButtons({
               {isExporting ? "Exporting..." : "Export"}
             </TooltipContent>
           </Tooltip>
-          
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button 
-                variant="outline" 
-                className="aspect-square max-lg:p-0 h-9 w-9 sm:h-10 sm:w-10"
-                onClick={handleDemoClick}
-              >
-                <RiShareBoxLine
-                  className="lg:-ms-1 opacity-40 size-4 sm:size-5"
-                  size={20}
-                  aria-hidden="true"
-                />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              Demo
-            </TooltipContent>
-          </Tooltip>
-          
+                    
           <Tooltip>
             <TooltipTrigger asChild>
               <Button 

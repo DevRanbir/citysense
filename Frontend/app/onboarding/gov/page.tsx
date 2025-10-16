@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/auth-context";
+import { useTheme } from "@/contexts/theme-context";
+import { Sun, Moon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { updateProfile } from "firebase/auth";
@@ -13,6 +15,7 @@ import Orb from "@/components/Orb";
 export default function GovOnboardingPage() {
   const { user } = useAuth();
   const router = useRouter();
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [fullName, setFullName] = useState("");
   const [gender, setGender] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -132,16 +135,23 @@ export default function GovOnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#E8E8E8] flex flex-col relative overflow-hidden">
+    <div className={`min-h-screen ${isDarkMode ? 'bg-[#0a1e1a]' : 'bg-[#E8E8E8]'} flex flex-col relative overflow-hidden`}>
       {/* Header - Pill-shaped Floating Nav */}
       <header className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="bg-white/95 backdrop-blur-md shadow-lg rounded-full px-8 py-3 flex items-center gap-8">
-          <div className="text-xl font-bold tracking-tight">
+        <div className={`${isDarkMode ? 'bg-gray-800/95 border border-gray-700' : 'bg-white/95'} backdrop-blur-md shadow-lg rounded-full px-8 py-3 flex items-center gap-8`}>
+          <div className={`text-xl font-bold tracking-tight ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             City<span className="text-lime-500">Sense</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Cancel</Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Help</Link>
+            <Link href="/" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Cancel</Link>
+            <Link href="/contact" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Help</Link>
+            <button
+              onClick={toggleDarkMode}
+              className={`p-2 rounded-full transition-colors ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="h-4 w-4 text-lime-400" /> : <Moon className="h-4 w-4 text-gray-600" />}
+            </button>
           </nav>
         </div>
       </header>
@@ -151,40 +161,40 @@ export default function GovOnboardingPage() {
         <div className="w-full max-w-3xl">
           {accessRequested ? (
             // Access Request Pending Screen
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-yellow-100 rounded-full mb-4">
-                <svg className="w-10 h-10 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className={`${isDarkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white'} rounded-2xl p-8 shadow-lg text-center`}>
+              <div className={`inline-flex items-center justify-center w-20 h-20 ${isDarkMode ? 'bg-yellow-900/30' : 'bg-yellow-100'} rounded-full mb-4`}>
+                <svg className={`w-10 h-10 ${isDarkMode ? 'text-yellow-400' : 'text-yellow-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">Access Request Submitted! ⏳</h2>
-              <p className="text-gray-600 mb-6">
+              <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-3`}>Access Request Submitted! ⏳</h2>
+              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
                 Your government account has been created and is pending admin approval.
               </p>
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
-                <h3 className="font-semibold text-blue-900 mb-2">What happens next?</h3>
-                <ul className="text-sm text-blue-800 space-y-2 text-left">
+              <div className={`${isDarkMode ? 'bg-blue-900/20 border-blue-700' : 'bg-blue-50 border-blue-200'} border rounded-xl p-4 mb-6`}>
+                <h3 className={`font-semibold ${isDarkMode ? 'text-blue-300' : 'text-blue-900'} mb-2`}>What happens next?</h3>
+                <ul className={`text-sm ${isDarkMode ? 'text-blue-200' : 'text-blue-800'} space-y-2 text-left`}>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-0.5">1.</span>
+                    <span className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'} mt-0.5`}>1.</span>
                     <span>Our admin team will review your government credentials</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-0.5">2.</span>
+                    <span className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'} mt-0.5`}>2.</span>
                     <span>You'll receive an email once your account is approved</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-0.5">3.</span>
+                    <span className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'} mt-0.5`}>3.</span>
                     <span>After approval, you can log in and access the government dashboard</span>
                   </li>
                 </ul>
               </div>
               <div className="space-y-3">
-                <p className="text-sm text-gray-500">
+                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                   Review typically takes 24-48 hours
                 </p>
                 <Link 
                   href="/"
-                  className="inline-block px-6 py-3 bg-lime-500 text-white rounded-xl font-medium hover:bg-lime-600 transition-colors"
+                  className={`inline-block px-6 py-3 ${isDarkMode ? 'bg-lime-400 text-black hover:bg-lime-500' : 'bg-lime-500 text-white hover:bg-lime-600'} rounded-xl font-medium transition-colors`}
                 >
                   Return to Home
                 </Link>
@@ -201,10 +211,10 @@ export default function GovOnboardingPage() {
               {/* Step 1: Welcome */}
               <Step>
                 <div className="text-center">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>
                     Welcome to CitySense!
                   </h2>
-                  <p className="text-gray-600 text-lg mb-6">
+                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} text-lg mb-6`}>
                     Let's set up your government portal access
                   </p>
                   <img 
@@ -224,11 +234,11 @@ export default function GovOnboardingPage() {
               {/* Step 2: Personal Info */}
               <Step>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Personal Information</h2>
-                  <p className="text-gray-600 mb-6">Tell us about yourself</p>
+                  <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>Personal Information</h2>
+                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>Tell us about yourself</p>
                   <div className="space-y-4">
                     <div>
-                      <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="fullName" className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -240,12 +250,12 @@ export default function GovOnboardingPage() {
                           setFullName(e.target.value);
                           if (validationError) setValidationError("");
                         }}
-                        className="w-full h-12 px-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none"
+                        className={`w-full h-12 px-4 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} border rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none`}
                         required
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-3">
+                      <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-3`}>
                         Gender <span className="text-red-500">*</span>
                       </label>
                       <div className="grid grid-cols-3 gap-3">
@@ -260,7 +270,9 @@ export default function GovOnboardingPage() {
                             className={`p-3 rounded-xl border-2 transition-all font-medium ${
                               gender === genderOption
                                 ? 'border-lime-400 bg-lime-50 text-gray-900'
-                                : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
+                                : isDarkMode 
+                                  ? 'border-gray-600 bg-gray-700 text-gray-300 hover:border-gray-500'
+                                  : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
                             }`}
                           >
                             {genderOption}
@@ -275,10 +287,10 @@ export default function GovOnboardingPage() {
               {/* Step 3: Position Selection */}
               <Step>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>
                     Position/Department <span className="text-red-500">*</span>
                   </h2>
-                  <p className="text-gray-600 mb-6">
+                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
                     Select your government department or role
                   </p>
                   <div className="space-y-4">
@@ -299,7 +311,9 @@ export default function GovOnboardingPage() {
                           className={`p-4 rounded-xl border-2 transition-all font-medium ${
                             position === pos
                               ? 'border-lime-400 bg-lime-50 text-gray-900'
-                              : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
+                              : isDarkMode
+                                ? 'border-gray-600 bg-gray-700 text-gray-300 hover:border-gray-500'
+                                : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
                           }`}
                         >
                           {pos}
@@ -308,7 +322,7 @@ export default function GovOnboardingPage() {
                     </div>
                     {position && (
                       <div className="text-center">
-                        <p className="text-sm text-lime-600 font-medium">
+                        <p className={`text-sm ${isDarkMode ? 'text-lime-400' : 'text-lime-600'} font-medium`}>
                           ✓ {position} selected
                         </p>
                       </div>
@@ -321,11 +335,11 @@ export default function GovOnboardingPage() {
               {position === "Other" && (
                 <Step>
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Specify Your Position</h2>
-                    <p className="text-gray-600 mb-6">Tell us more about your role</p>
+                    <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>Specify Your Position</h2>
+                    <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>Tell us more about your role</p>
                     <div className="space-y-4">
                       <div>
-                        <label htmlFor="otherPosition" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="otherPosition" className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
                           What is your position? <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -337,12 +351,12 @@ export default function GovOnboardingPage() {
                             setOtherPosition(e.target.value);
                             if (validationError) setValidationError("");
                           }}
-                          className="w-full h-12 px-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none"
+                          className={`w-full h-12 px-4 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} border rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none`}
                           required
                         />
                       </div>
                       <div>
-                        <label htmlFor="otherPositionRelation" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="otherPositionRelation" className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
                           How is it related to government? <span className="text-red-500">*</span>
                         </label>
                         <textarea
@@ -354,7 +368,7 @@ export default function GovOnboardingPage() {
                             if (validationError) setValidationError("");
                           }}
                           rows={4}
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none resize-none"
+                          className={`w-full px-4 py-3 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} border rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none resize-none`}
                           required
                         />
                       </div>
@@ -366,11 +380,11 @@ export default function GovOnboardingPage() {
               {/* Step 5: Organization & City */}
               <Step>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Government Details</h2>
-                  <p className="text-gray-600 mb-6">Help us verify your affiliation</p>
+                  <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>Government Details</h2>
+                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>Help us verify your affiliation</p>
                   <div className="space-y-4">
                     <div>
-                      <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="organization" className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
                         Government Agency <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -382,12 +396,12 @@ export default function GovOnboardingPage() {
                           setOrganization(e.target.value);
                           if (validationError) setValidationError("");
                         }}
-                        className="w-full h-12 px-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none"
+                        className={`w-full h-12 px-4 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} border rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none`}
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="city" className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
                         City/Municipality <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -399,7 +413,7 @@ export default function GovOnboardingPage() {
                           setCity(e.target.value);
                           if (validationError) setValidationError("");
                         }}
-                        className="w-full h-12 px-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none"
+                        className={`w-full h-12 px-4 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} border rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none`}
                         required
                       />
                     </div>
@@ -410,12 +424,12 @@ export default function GovOnboardingPage() {
               {/* Step 6: Contact Preferences */}
               <Step>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
-                  <p className="text-gray-600 mb-6">How can we reach you?</p>
+                  <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>Contact Information</h2>
+                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>How can we reach you?</p>
                   <div className="space-y-4">
                     <div>
-                      <label htmlFor="mobileNumber" className="block text-sm font-medium text-gray-700 mb-2">
-                        Mobile Number <span className="text-gray-400 text-xs">(Optional)</span>
+                      <label htmlFor="mobileNumber" className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
+                        Mobile Number <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} text-xs`}>(Optional)</span>
                       </label>
                       <input
                         id="mobileNumber"
@@ -423,9 +437,9 @@ export default function GovOnboardingPage() {
                         placeholder="+91 xxxxx-xxxxx"
                         value={mobileNumber}
                         onChange={(e) => setMobileNumber(e.target.value)}
-                        className="w-full h-12 px-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none"
+                        className={`w-full h-12 px-4 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} border rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent outline-none`}
                       />
-                      <p className="text-xs text-gray-500 mt-1">For urgent notifications and updates</p>
+                      <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mt-1`}>For urgent notifications and updates</p>
                     </div>
                   </div>
                 </div>
@@ -435,49 +449,44 @@ export default function GovOnboardingPage() {
               <Step>
                 <div>
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-lime-100 rounded-full mb-3">
-                      <svg className="w-7 h-7 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-1">Review Your Information</h2>
-                    <p className="text-sm text-gray-600">Make sure everything is correct before submitting</p>
+                    <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>Review Your Information</h2>
+                    <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Make sure everything is correct before submitting</p>
                   </div>
 
-                  <div className="bg-white border border-gray-200 rounded-xl p-4 mb-4">
+                  <div className={`${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-xl p-4 mb-4`}>
                     <div className="space-y-2.5">
                       <div className="flex justify-between items-center py-1.5">
-                        <span className="text-sm text-gray-600">Name</span>
-                        <span className="text-sm font-medium text-gray-900">{fullName}</span>
+                        <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Name</span>
+                        <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{fullName}</span>
                       </div>
-                      <div className="flex justify-between items-center py-1.5 border-t border-gray-100">
-                        <span className="text-sm text-gray-600">Gender</span>
-                        <span className="text-sm font-medium text-gray-900">{gender}</span>
+                      <div className={`flex justify-between items-center py-1.5 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}`}>
+                        <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Gender</span>
+                        <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{gender}</span>
                       </div>
-                      <div className="flex justify-between items-center py-1.5 border-t border-gray-100">
-                        <span className="text-sm text-gray-600">Position</span>
-                        <span className="text-sm font-medium text-gray-900">
+                      <div className={`flex justify-between items-center py-1.5 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}`}>
+                        <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Position</span>
+                        <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                           {position === "Other" ? otherPosition : position}
                         </span>
                       </div>
                       {position === "Other" && (
-                        <div className="pt-1.5 border-t border-gray-100">
-                          <span className="text-sm text-gray-600 block mb-1">Government Relation</span>
-                          <span className="text-sm text-gray-700">{otherPositionRelation}</span>
+                        <div className={`pt-1.5 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}`}>
+                          <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} block mb-1`}>Government Relation</span>
+                          <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{otherPositionRelation}</span>
                         </div>
                       )}
-                      <div className="flex justify-between items-center py-1.5 border-t border-gray-100">
-                        <span className="text-sm text-gray-600">Agency</span>
-                        <span className="text-sm font-medium text-gray-900 text-right">{organization}</span>
+                      <div className={`flex justify-between items-center py-1.5 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}`}>
+                        <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Agency</span>
+                        <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'} text-right`}>{organization}</span>
                       </div>
-                      <div className="flex justify-between items-center py-1.5 border-t border-gray-100">
-                        <span className="text-sm text-gray-600">City</span>
-                        <span className="text-sm font-medium text-gray-900">{city}</span>
+                      <div className={`flex justify-between items-center py-1.5 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}`}>
+                        <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>City</span>
+                        <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{city}</span>
                       </div>
                       {mobileNumber && (
-                        <div className="flex justify-between items-center py-1.5 border-t border-gray-100">
-                          <span className="text-sm text-gray-600">Mobile</span>
-                          <span className="text-sm font-medium text-gray-900">{mobileNumber}</span>
+                        <div className={`flex justify-between items-center py-1.5 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}`}>
+                          <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Mobile</span>
+                          <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{mobileNumber}</span>
                         </div>
                       )}
                     </div>
@@ -485,21 +494,21 @@ export default function GovOnboardingPage() {
 
                   {/* Validation Error Message */}
                   {validationError && (
-                    <div className="bg-red-50 border border-red-200 rounded-xl p-3 mb-4">
+                    <div className={`${isDarkMode ? 'bg-red-900/20 border-red-700' : 'bg-red-50 border-red-200'} border rounded-xl p-3 mb-4`}>
                       <div className="flex items-center gap-2">
-                        <svg className="w-5 h-5 text-red-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className={`w-5 h-5 ${isDarkMode ? 'text-red-400' : 'text-red-600'} flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <p className="text-sm text-red-800 font-medium">{validationError}</p>
+                        <p className={`text-sm ${isDarkMode ? 'text-red-300' : 'text-red-800'} font-medium`}>{validationError}</p>
                       </div>
                     </div>
                   )}
 
-                  <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-4 text-center">
-                    <p className="text-sm text-gray-800 font-medium mb-1">
+                  <div className={`${isDarkMode ? 'bg-gradient-to-r from-amber-900/20 to-yellow-900/20 border border-amber-700' : 'bg-gradient-to-r from-amber-50 to-yellow-50'} rounded-xl p-4 text-center`}>
+                    <p className={`text-sm ${isDarkMode ? 'text-amber-300' : 'text-gray-800'} font-medium mb-1`}>
                       ⏳ Admin Approval Required
                     </p>
-                    <p className="text-xs text-gray-600">
+                    <p className={`text-xs ${isDarkMode ? 'text-amber-200/80' : 'text-gray-600'}`}>
                       After submission, an admin will review your credentials before granting access
                     </p>
                   </div>

@@ -18,7 +18,7 @@ export default function TitleSetter() {
 
   useEffect(() => {
     const page = niceTitleFromPath(pathname || "/");
-    document.title = `SCC — ${page}`;
+    document.title = `CitySense —${page}`;
   }, [pathname]);
 
   return null;

@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/auth-context";
-import { Eye, EyeOff, ArrowRight, Search, CheckCircle } from "lucide-react";
+import { useTheme } from "@/contexts/theme-context";
+import { Eye, EyeOff, ArrowRight, Search, CheckCircle, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ConfirmationResult, RecaptchaVerifier } from "firebase/auth";
@@ -13,6 +14,7 @@ import { ConfirmationResult, RecaptchaVerifier } from "firebase/auth";
 export default function SignupPage() {
   const { signUp, user } = useAuth();
   const router = useRouter();
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [userType, setUserType] = useState<'consumer' | 'government'>('consumer');
   
   // Signup state
@@ -111,28 +113,26 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#E8E8E8] flex flex-col">
+    <div className={`min-h-screen ${isDarkMode ? 'bg-[#0a1e1a]' : 'bg-[#E8E8E8]'} flex flex-col`}>
       {/* Header - Pill-shaped Floating Nav */}
       <header className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="bg-white/95 backdrop-blur-md shadow-lg rounded-full px-8 py-3 flex items-center gap-8">
+        <div className={`${isDarkMode ? 'bg-gray-800/95 border border-gray-700' : 'bg-white/95'} backdrop-blur-md shadow-lg rounded-full px-8 py-3 flex items-center gap-8`}>
           <div className="text-xl font-bold tracking-tight">
             City<span className="text-lime-500">Sense</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</Link>
-            <Link href="/dashboard" className="text-gray-600 hover:text-gray-900 transition-colors">Dashboard</Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
+            <Link href="/" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Home</Link>
+            <Link href="/contact" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Contact</Link>
           </nav>
           <div className="flex items-center gap-3">
-            <div className="relative hidden lg:block">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder='Search...'
-                className="pl-10 pr-4 py-2 w-48 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lime-400 transition-all"
-              />
-            </div>
+            <button
+              onClick={toggleDarkMode}
+              className={`p-2 rounded-lg ${isDarkMode ? 'text-gray-300 hover:text-white hover:bg-gray-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'} transition-all`}
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+
             <Link href="/login">
               <Button className="bg-lime-400 hover:bg-lime-500 text-black font-medium rounded-full px-5 py-2 text-sm transition-colors">
                 Login
@@ -148,7 +148,7 @@ export default function SignupPage() {
         <div className="flex-1 flex flex-col justify-between p-12 lg:p-20">
           <div className="flex-1 flex flex-col items-center justify-center space-y-12">
             <div className="space-y-6 pt-5 text-center">
-              <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              <h1 className={`text-4xl lg:text-5xl font-bold leading-tight ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                 JOIN THE<br />
                 <span className="relative inline-block">
                   FUTURE
@@ -167,9 +167,9 @@ export default function SignupPage() {
 
             {/** Signup header */}
             <div className="max-w-md mx-auto text-center">
-              <p className="text-xs text-gray-600 tracking-widest font-medium">SMART CITY PLATFORM</p>
-              <h2 className="text-3xl font-bold mt-2 text-gray-900">Create Account</h2>
-              <p className="text-sm text-gray-500 mt-1">Sign up to get started</p>
+              <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} tracking-widest font-medium`}>SMART CITY PLATFORM</p>
+              <h2 className={`text-3xl font-bold mt-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Create Account</h2>
+              <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mt-1`}>Sign up to get started</p>
             </div>
           </div>
 
@@ -190,23 +190,23 @@ export default function SignupPage() {
           </div>
 
           {/* Signup Card */}
-          <div className="relative z-10 bg-white rounded-3xl p-8 mt-20 w-full max-w-md mx-8 shadow-2xl">
+          <div className={`relative z-10 ${isDarkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white'} rounded-3xl p-8 mt-20 w-full max-w-md mx-8 shadow-2xl`}>
             {!verificationSent ? (
               <>
                 <div className="mb-6">
-                  <h2 className="text-2xl font-bold text-gray-900">Create your account</h2>
-                  <p className="text-sm text-gray-500 mt-1 capitalize">{userType} Portal</p>
+                  <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Create your account</h2>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mt-1 capitalize`}>{userType} Portal</p>
                 </div>
 
                 {/* User Type Toggle */}
-                <div className="flex items-center gap-2 bg-gray-50 rounded-full p-2 mb-6">
+                <div className={`flex items-center gap-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'} rounded-full p-2 mb-6`}>
                   <button
                     type="button"
                     onClick={() => setUserType('consumer')}
                     className={`flex-1 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
                       userType === 'consumer'
                         ? 'bg-lime-400 text-black shadow-md'
-                        : 'text-gray-600 hover:text-gray-900'
+                        : isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
                     }`}
                   >
                     Consumer
@@ -217,7 +217,7 @@ export default function SignupPage() {
                     className={`flex-1 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
                       userType === 'government'
                         ? 'bg-lime-400 text-black shadow-md'
-                        : 'text-gray-600 hover:text-gray-900'
+                        : isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
                     }`}
                   >
                     Government
@@ -227,7 +227,7 @@ export default function SignupPage() {
                 <form onSubmit={handleSubmit} className="space-y-5">
               {/* Email Field */}
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm text-gray-700">
+                <Label htmlFor="email" className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   Email
                 </Label>
                 <Input
@@ -236,14 +236,14 @@ export default function SignupPage() {
                   placeholder="your.email@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="h-12 bg-gray-50 border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent"
+                  className={`h-12 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent`}
                   required
                 />
               </div>
 
               {/* Password Field */}
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-sm text-gray-700">
+                <Label htmlFor="password" className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   Password
                 </Label>
                 <div className="relative">
@@ -253,13 +253,13 @@ export default function SignupPage() {
                     placeholder="••••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="h-12 bg-gray-50 border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent pr-10"
+                    className={`h-12 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent pr-10`}
                     required
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                    className={`absolute right-3 top-1/2 transform -translate-y-1/2 ${isDarkMode ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'}`}
                   >
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
@@ -268,7 +268,7 @@ export default function SignupPage() {
 
               {/* Confirm Password Field */}
               <div className="space-y-2">
-                <Label htmlFor="confirmPassword" className="text-sm text-gray-700">
+                <Label htmlFor="confirmPassword" className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   Confirm Password
                 </Label>
                 <div className="relative">
@@ -278,13 +278,13 @@ export default function SignupPage() {
                     placeholder="••••••••••"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="h-12 bg-gray-50 border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent pr-10"
+                    className={`h-12 ${isDarkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200'} rounded-xl focus:ring-2 focus:ring-lime-400 focus:border-transparent pr-10`}
                     required
                   />
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                    className={`absolute right-3 top-1/2 transform -translate-y-1/2 ${isDarkMode ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'}`}
                   >
                     {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
@@ -300,9 +300,9 @@ export default function SignupPage() {
                   onChange={(e) => setAgreeToTerms(e.target.checked)}
                   className="w-4 h-4 accent-lime-400 rounded border-gray-300"
                 />
-                <Label htmlFor="terms" className="text-sm text-gray-700 cursor-pointer">
+                <Label htmlFor="terms" className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} cursor-pointer`}>
                   I agree to the{" "}
-                  <Link href="/terms" className="text-gray-900 font-medium hover:underline">
+                  <Link href="/terms" className={`${isDarkMode ? 'text-lime-400 hover:text-lime-300' : 'text-gray-900'} font-medium hover:underline`}>
                     Terms & Conditions
                   </Link>
                 </Label>
@@ -319,22 +319,12 @@ export default function SignupPage() {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full h-12 bg-black hover:bg-gray-800 text-white rounded-xl font-medium transition-colors"
+                className={`w-full h-12 ${isDarkMode ? 'bg-lime-400 hover:bg-lime-500 text-black' : 'bg-black hover:bg-gray-800 text-white'} rounded-xl font-medium transition-colors`}
               >
                 {isLoading ? "Creating account..." : "Create account"}
               </Button>
             </form>
 
-            {/* Footer Links */}
-            <div className="mt-6 text-center space-y-2">
-              <p className="text-sm text-gray-600">
-                Already have an account?{" "}
-                <Link href="/login" className="text-gray-900 font-medium hover:underline">
-                  Sign in
-                  <ArrowRight className="inline h-3 w-3 ml-1" />
-                </Link>
-              </p>
-            </div>
             </>
             ) : (
               /* Verification Sent Message */
@@ -344,17 +334,17 @@ export default function SignupPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Check your email</h2>
-                <p className="text-gray-600 mb-2">
+                <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-3`}>Check your email</h2>
+                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-2`}>
                   We've sent a verification link to
                 </p>
-                <p className="text-gray-900 font-medium mb-4">{email}</p>
-                <p className="text-sm text-gray-500 mb-6">
+                <p className={`${isDarkMode ? 'text-white' : 'text-gray-900'} font-medium mb-4`}>{email}</p>
+                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mb-6`}>
                   Click the link in the email to verify your account. We'll automatically detect when you verify and redirect you to onboarding.
                 </p>
                 
                 {/* Auto-checking indicator */}
-                <div className="flex items-center justify-center gap-2 mb-6 text-sm text-gray-600">
+                <div className={`flex items-center justify-center gap-2 mb-6 text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   <div className="animate-pulse w-2 h-2 bg-lime-500 rounded-full"></div>
                   <span>Auto-checking every 5 seconds...</span>
                 </div>

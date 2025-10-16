@@ -451,26 +451,6 @@ export default function Page() {
                   </div>
                   {/* Right side */}
                   <div className="no-print flex items-center gap-3">
-                    {/* User Info and Logout */}
-                    {user && (
-                      <div className="flex items-center gap-2">
-                        <span className={`text-xs font-medium ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                          {user.displayName || user.email}
-                        </span>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={logOut}
-                          className={`text-xs ${
-                            isDarkMode 
-                              ? "bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700" 
-                              : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
-                          }`}
-                        >
-                          Logout
-                        </Button>
-                      </div>
-                    )}
                     <ActionButtons 
                       onExport={handleExport} 
                       hasDateFilter={hasDateFilter}

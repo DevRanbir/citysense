@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useRef, useState } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
+import { FIREBASE_LOCATIONS } from "@/services/firebase-location-service";
 
 // Real coordinates for Chandigarh locations
 const trafficData = [
@@ -69,11 +70,16 @@ export function Chart01({ selectedLocation }: Chart01Props) {
 
         const google = await loader.load();
         
-        // Center on Chandigarh, India
-        const chandigarhCenter = { lat: 30.7333, lng: 76.7794 };
+        // Get coordinates for selected location, fallback to Chandigarh
+        const locationConfig = selectedLocation 
+          ? FIREBASE_LOCATIONS[selectedLocation as keyof typeof FIREBASE_LOCATIONS]
+          : null;
+        const mapCenter = locationConfig?.coords || { lat: 30.7333, lng: 76.7794 };
+        
+        console.log(`🗺️ Traffic Map centering on ${selectedLocation || 'Chandigarh'} at`, mapCenter);
         
         const map = new google.maps.Map(mapRef.current, {
-          center: chandigarhCenter,
+          center: mapCenter,
           zoom: 13,
           mapTypeControl: false,
           streetViewControl: false,
@@ -164,6 +170,18 @@ export function Chart01({ selectedLocation }: Chart01Props) {
       }
     }
   }, [displayData, selectedLocation, isMapLoaded]);
+
+  // Recenter map when selected location changes
+  useEffect(() => {
+    if (!isMapLoaded || !mapInstanceRef.current || !selectedLocation) return;
+
+    const locationConfig = FIREBASE_LOCATIONS[selectedLocation as keyof typeof FIREBASE_LOCATIONS];
+    if (locationConfig?.coords) {
+      console.log(`🗺️ Traffic Map recentering to ${selectedLocation}`, locationConfig.coords);
+      mapInstanceRef.current.panTo(locationConfig.coords);
+      mapInstanceRef.current.setZoom(13);
+    }
+  }, [selectedLocation, isMapLoaded]);
 
   return (
     <Card className="gap-4">

@@ -1,26 +1,20 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { StaggeredMenu } from "@/components/StaggeredMenu"
-import { PageLoader } from "@/components/page-loader"
 import { useTheme } from "@/contexts/theme-context"
-import PillNav from '@/components/PillNav'
-import logo from '@/public/favicon.svg'
+import { useAuth } from "@/contexts/auth-context"
 import { AppSidebar } from "@/components/app-sidebar"
-import { SidebarProvider, SidebarTrigger, useSidebar } from "@/components/ui/sidebar"
-import { RiSparkling2Line } from "@remixicon/react"
-import Lottie from "lottie-react"
-import landingAnimation from "@/components/landing-animation.json"
+import { SidebarProvider } from "@/components/ui/sidebar"
+import GridMotion from "@/components/GridMotion"
 
 import { 
   MapPin, 
   Zap, 
   Shield, 
   Clock, 
-  Users, 
   Activity, 
   Target, 
   Building,
@@ -29,114 +23,50 @@ import {
   TrendingUp,
   BarChart3,
   CheckCircle,
-  ArrowRight,
   Sun,
   Moon,
-  Menu,
-  X,
   CarTaxiFront,
-  MessageCircle,
+  Sparkles,
+  ArrowRight,
 } from "lucide-react"
 import Link from "next/link"
 
-// Helper component to sync mobile sidebar state
-function SidebarSync({ isOpen }: { isOpen: boolean }) {
-  const { setOpenMobile, isMobile } = useSidebar();
-  
-  useEffect(() => {
-    if (isMobile && isOpen) {
-      setOpenMobile(true);
-    } else if (isMobile && !isOpen) {
-      setOpenMobile(false);
-    }
-  }, [isOpen, isMobile, setOpenMobile]);
-  
-  return null;
-}
-
 export default function LandingPage() {
   const { isDarkMode, toggleDarkMode } = useTheme();
-  const [showPillNav, setShowPillNav] = useState(false)
+  const { user, logOut } = useAuth();
   const [isChatboxOpen, setIsChatboxOpen] = useState(false)
-  const [buttonSuccess, setButtonSuccess] = useState(false)
-  const [hideScrollbar, setHideScrollbar] = useState(true)
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [showTitle, setShowTitle] = useState(false)
-  const [showSubtitle, setShowSubtitle] = useState(false)
-  const [showButtons, setShowButtons] = useState(false)
-  const [showMenu, setShowMenu] = useState(false)
 
-  // Handle page load animations
-  useEffect(() => {
-    if (isDarkMode) {
-      // Dark mode: Use loading delays
-      const loadTimer = setTimeout(() => {
-        setIsLoaded(true);
-      }, 5500);
-
-      const titleTimer = setTimeout(() => {
-        setShowTitle(true);
-      }, 6000);
-
-      const subtitleTimer = setTimeout(() => {
-        setShowSubtitle(true);
-      }, 6500);
-
-      const buttonsTimer = setTimeout(() => {
-        setShowButtons(true);
-      }, 7000);
-
-      const menuTimer = setTimeout(() => {
-        setShowMenu(true);
-      }, 7200);
-
-      return () => {
-        clearTimeout(loadTimer);
-        clearTimeout(titleTimer);
-        clearTimeout(subtitleTimer);
-        clearTimeout(buttonsTimer);
-        clearTimeout(menuTimer);
-      };
-    } else {
-      // Light mode: Show everything immediately
-      setIsLoaded(true);
-      setShowTitle(true);
-      setShowSubtitle(true);
-      setShowButtons(true);
-      setShowMenu(true);
-    }
-  }, [isDarkMode]);
-
-  // Handle scroll to show/hide PillNav based on viewport position
-  useEffect(() => {
-    let ticking = false;
-    
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          const viewportHeight = window.innerHeight;
-          
-          // Show PillNav when user scrolls past 100vh with a small buffer
-          const shouldShow = scrollY > viewportHeight + 50;
-          setShowPillNav(shouldShow);
-          
-          // Hide scrollbar only in first 100vh
-          setHideScrollbar(scrollY < viewportHeight);
-          
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Check initial position
-    handleScroll();
-    
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // GridMotion items configuration
+  const gridItems = [
+    'AI Traffic',
+    <div key='jsx-item-1' className="text-lime-400 font-bold">Emergency Route</div>,
+    'https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=3870&auto=format&fit=crop',
+    'Smart City',
+    <div key='jsx-item-2' className="text-blue-400 font-bold">Real-time Data</div>,
+    'IoT Sensors',
+    <div key='jsx-item-3' className="text-purple-400 font-bold">CitySense</div>,
+    'https://images.unsplash.com/photo-1477346611705-65d1883cee1e?q=80&w=3870&auto=format&fit=crop',
+    'Vehicle Track',
+    <div key='jsx-item-4' className="text-green-400 font-bold">Route Optimize</div>,
+    'Analytics',
+    <div key='jsx-item-5' className="text-yellow-400 font-bold">AI Powered</div>,
+    'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=3870&auto=format&fit=crop',
+    'Blockchain',
+    <div key='jsx-item-6' className="text-red-400 font-bold">Emergency</div>,
+    'Ambulance',
+    <div key='jsx-item-7' className="text-cyan-400 font-bold">Fire Rescue</div>,
+    'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=3870&auto=format&fit=crop',
+    'Police',
+    <div key='jsx-item-8' className="text-orange-400 font-bold">Response Time</div>,
+    'Traffic Light',
+    <div key='jsx-item-9' className="text-pink-400 font-bold">Coordination</div>,
+    'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=3870&auto=format&fit=crop',
+    'GPS Track',
+    <div key='jsx-item-10' className="text-indigo-400 font-bold">Live Monitor</div>,
+    'Dashboard',
+    <div key='jsx-item-11' className="text-teal-400 font-bold">24/7 Support</div>,
+    'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=3870&auto=format&fit=crop',
+  ]
 
   const stats = [
     { value: "45%", label: "Faster response times", icon: TrendingUp },
@@ -199,711 +129,467 @@ export default function LandingPage() {
   ]
 
   return (
-    <PageLoader>
-      <SidebarProvider 
-        open={isChatboxOpen} 
-        onOpenChange={setIsChatboxOpen}
-      >
-        <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-          
-          body::-webkit-scrollbar,
-          html::-webkit-scrollbar {
-            display: ${hideScrollbar ? 'none' : 'block'};
-          }
-          body,
-          html {
-            scrollbar-width: ${hideScrollbar ? 'none' : 'auto'};
-            -ms-overflow-style: ${hideScrollbar ? 'none' : 'auto'};
-          }
-          
-          @keyframes zoom-in {
-            0% {
-              opacity: 0;
-              transform: scale(0.5);
-            }
-            100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
-          
-          @keyframes fade-in-up {
-            0% {
-              opacity: 0;
-              transform: translateY(30px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          
-          @keyframes fade-in-scale {
-            0% {
-              opacity: 0;
-              transform: scale(0.8);
-            }
-            100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
-          
-          .animate-zoom-in {
-            animation: zoom-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-          }
-          
-          .animate-fade-in-up {
-            animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-          }
-          
-          .animate-fade-in-scale {
-            animation: fade-in-scale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-          }
-          
-          .light-animated-button {
-            display: block;
-            background-color: #ef4444;
-            width: 150px;
-            height: 45px;
-            line-height: 45px;
-            color: #fff;
-            cursor: pointer;
-            overflow: hidden;
-            border-radius: 6px;
-            transition: all 0.25s cubic-bezier(0.310, -0.105, 0.430, 1.400);
-            text-decoration: none;
-            position: relative;
-          }
-          
-          .light-animated-button span,
-          .light-animated-button .icon {
-            display: block;
-            height: 100%;
-            text-align: center;
-            position: absolute;
-            top: 0;
-          }
-          
-          .light-animated-button span {
-            width: 72%;
-            line-height: inherit;
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 600;
-            left: 0;
-            transition: all 0.25s cubic-bezier(0.310, -0.105, 0.430, 1.400);
-          }
-          
-          .light-animated-button span:after {
-            content: '';
-            background-color: #dc2626;
-            width: 2px;
-            height: 60%;
-            position: absolute;
-            top: 20%;
-            right: -1px;
-          }
-          
-          .light-animated-button .icon {
-            width: 28%;
-            right: 0;
-            transition: all 0.25s cubic-bezier(0.310, -0.105, 0.430, 1.400);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          
-          .light-animated-button .icon svg {
-            width: 18px;
-            height: 18px;
-            transition: all 0.25s cubic-bezier(0.310, -0.105, 0.430, 1.400);
-          }
-          
-          .light-animated-button:hover span {
-            left: -72%;
-            opacity: 0;
-          }
-          
-          .light-animated-button:hover .icon {
-            width: 100%;
-          }
-          
-          .light-animated-button:hover .icon svg {
-            width: 24px;
-            height: 24px;
-            color: #dc2626;
-          }
-          
-          .light-animated-button:hover {
-            background-color: #ffffffff;
-            border: 1px solid #dc2626;
-            color: #dc2626;
-          }
-          
-          .light-animated-button:active {
-            transform: translateY(1px);
-          }
-        `}</style>
+    <SidebarProvider 
+      open={isChatboxOpen} 
+      onOpenChange={setIsChatboxOpen}
+    >
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
-        <div className={`${isDarkMode ? "dark bg-gray-900 text-white w-full" : "bg-white text-gray-900 w-full"}`} style={{ scrollBehavior: 'smooth' }}>
+        * {
+          font-family: 'Inter', sans-serif;
+        }
         
-
+        .gridmotion-background {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 0;
+          opacity: ${isDarkMode ? '0.15' : '0.08'};
+        }
+      `}</style>
+      
+      <div className={`${isDarkMode ? "dark bg-[#0a1e1a] text-white w-full" : "bg-white text-gray-900 w-full"}`} style={{ scrollBehavior: 'smooth', position: 'relative' }}>
         
-        {/* PillNav - Desktop: bottom right, Mobile: bottom center navbar */}
-        {/* Desktop PillNav - bottom right */}
-        <div className={`hidden md:block fixed bottom-6 z-50 ease-in-out transition-all duration-300 ${
-          showPillNav 
-            ? 'opacity-100 translate-y-0 pointer-events-auto' 
-            : 'opacity-0 translate-y-4 pointer-events-none'
-        } ${
-          isChatboxOpen 
-            ? 'right-[28rem]' // Move left when sidebar is open (24rem sidebar width + 4rem margin)
-            : 'right-5' // Normal position when sidebar is closed
-        }`}>
-          <PillNav
-            logo={logo}
-            logoAlt="Company Logo"
-            items={[
-              { label: 'Demo', href: '/demo' },
-              { label: 'Reports', href: '/dashboard' },
-              { label: 'Contact', href: '/contact' }
-            ]}
-            activeHref="/"
-            className="custom-nav"
-            ease="power2.easeOut"
-            baseColor={isDarkMode ? "#ffffff" : "#EF4444"}
-            pillColor={isDarkMode ? "#000000" : "#ffffffff"}
-            hoveredPillTextColor={isDarkMode ? "#000000" : "#ffffff"}
-            pillTextColor={isDarkMode ? "#ffffff" : "#000000c8"}
-            hidden={true}
-          />
+        {/* GridMotion Background */}
+        <div className="gridmotion-background">
+          <GridMotion items={gridItems} gradientColor={isDarkMode ? '#0a1e1a' : '#ffffff'} />
         </div>
 
-        {/* Mobile Navigation Bar - bottom center */}
-        {!isChatboxOpen && (
-          <div className={`md:hidden fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-            showPillNav 
-              ? 'opacity-100 translate-y-0 pointer-events-auto' 
-              : 'opacity-0 translate-y-full pointer-events-none'
-          }`}>
-          <div className={`mx-4 mb-4 rounded-xl backdrop-blur-md border shadow-lg ${
-            isDarkMode 
-              ? 'bg-gray-900/90 border-gray-700' 
-              : 'bg-white/90 border-gray-200'
-          }`}>
-            <nav className="flex justify-center items-center py-3 px-4">
-              <div className="flex gap-6">
-                <Link href="/demo" className={`px-3 py-2 rounded-lg transition-all duration-200 font-medium text-xs ${
-                  isDarkMode 
-                    ? 'text-gray-300 hover:text-white hover:bg-gray-800/60' 
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/60'
-                }`}>
-                  Demo
-                </Link>
-                
-                <Link href="/dashboard" className={`px-3 py-2 rounded-lg transition-all duration-200 font-medium text-xs ${
-                  isDarkMode 
-                    ? 'text-gray-300 hover:text-white hover:bg-gray-800/60' 
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/60'
-                }`}>
-                  Reports
-                </Link>
-                
-                <Link href="/contact" className={`px-3 py-2 rounded-lg transition-all duration-200 font-medium text-xs ${
-                  isDarkMode 
-                    ? 'text-gray-300 hover:text-white hover:bg-gray-800/60' 
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/60'
-                }`}>
-                  Contact
-                </Link>
+        {/* Main Content Container */}
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          
+          {/* Header */}
+          <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6">
+            <div className="max-w-4xl mx-auto flex items-center justify-between backdrop-blur-sm border border-black/90 rounded-2xl p-4">
+              {/* Logo */}
+              <div className="flex items-center gap-3">
+                <div className={`flex items-center gap-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  <span className="text-xl font-medium">CitySense</span>
+                </div>
               </div>
-            </nav>
-          </div>
-        </div>
-        )}
-  
-        {/* Hero Section */}
-        {isDarkMode ? (
-          // Dark Mode - Video Version
-          <section className="relative py-8 px-4 pt-8 min-h-screen flex items-center">
-            {/* Video Background */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover z-0"
-            >
-              <source src="/vid.webm" type="video/webm" />
-              Your browser does not support the video tag.
-            </video>
-            
-            {/* Overlay for better text readability */}
-            <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/40"></div>
-            
-            {/* Top Left Theme Toggle with Logo */}
-            {showTitle && (
-              <div className="absolute top-8 left-8 z-30 animate-fade-in-scale flex items-center gap-4">
+
+              {/* Navigation */}
+              <nav className="hidden md:flex items-start gap-8">
+                <Link href="/contact" className={`text-sm font-medium ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
+                  Ask a Question
+                </Link>
+                {user ? (
+                  <>
+                    <Link href="/dashboard" className={`text-sm font-medium ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
+                      Dashboard
+                    </Link>
+                    <button 
+                      onClick={logOut}
+                      className={`text-sm font-medium ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/login" className={`text-sm font-medium ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
+                      Login
+                    </Link>
+                    <Link href="/signup" className={`text-sm font-medium ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
+                      Sign Up
+                    </Link>
+                  </>
+                )}
+              </nav>
+
+              {/* CTA Button & Theme Toggle */}
+              <div className="flex items-center gap-4">
                 <button
                   onClick={toggleDarkMode}
-                  className="flex items-center gap-1 text-white/70 hover:text-white transition-all duration-300 hover:scale-105"
+                  className={`p-2 rounded-lg ${isDarkMode ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'} transition-all`}
                   aria-label="Toggle theme"
                 >
-                  <Sun className="w-4 h-4" />
+                  {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>
-                <h2 
-                  className="text-2xl sm:text-3xl font-bold text-white tracking-wider"
-                  style={{ 
-                    fontFamily: 'Major Mono Display, monospace',
-                    letterSpacing: '0.1em'
-                  }}
-                >
-                  SCC
-                </h2>
-              </div>
-            )}
-
-            {/* Main Content - Left Aligned */}
-            <div className="absolute left-8 sm:left-16 top-1/2 transform -translate-y-1/2 z-20 text-left">
-              {showTitle && (
-                <div className="animate-zoom-in">
-                  <h1 
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight" 
-                    style={{ 
-                      fontFamily: 'Major Mono Display, monospace',
-                      letterSpacing: '0.05em',
-                      textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-                      fontWeight: '400'
-                    }}
-                  >
-                    Smart City Copilot
-                  </h1>
-                </div>
-              )}
-              {showSubtitle && (
-                <div className="animate-fade-in-up max-w-md">
-                  <p 
-                    className="text-xs sm:text-sm text-white/70 leading-relaxed tracking-wide mb-4"
-                    style={{ 
-                      fontFamily: 'Major Mono Display, monospace',
-                      letterSpacing: '0.05em'
-                    }}
-                  >
-                    Made by team <span className="font-semibold text-white">ChocoLava</span> for advanced mapping and route optimization for emergency services.
-                    <br />
-                    Get ambulances and fire trucks to destinations faster with AI-powered routing.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* Top Right Chatbox */}
-            {showMenu && (
-              <div className="absolute top-8 right-8 z-30 animate-fade-in-scale">
-                <button 
-                  className="flex items-center gap-2 text-white/70 hover:text-white transition-all duration-300 cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsChatboxOpen(true);
-                  }}
-                >
-                  <div className="w-3 h-3 border border-white/50"></div>
-                  <span 
-                    className="text-xs tracking-wider"
-                    style={{ 
-                      fontFamily: 'Major Mono Display, monospace',
-                      letterSpacing: '0.1em'
-                    }}
-                  >
-                    chatbox
-                  </span>
-                  <span className="text-white/50">›</span>
-                </button>
-              </div>
-            )}
-            
-            {/* Bottom Right Navigation */}
-            {showButtons && (
-              <div className="absolute bottom-8 right-8 sm:right-12 z-30 animate-fade-in-up">
-                <div className="flex items-center">
-                  {/* Demo Button */}
-                  <Link 
-                    href="/demo"
-                    className="group text-xs sm:text-sm font-medium tracking-wider transition-all duration-300 hover:scale-105 text-white/80 hover:text-white"
-                    style={{ 
-                      fontFamily: 'Major Mono Display, monospace',
-                      letterSpacing: '0.1em'
-                    }}
-                  >
-                    <div className="relative w-20 text-center">
-                      <span className="block transition-all duration-300 group-hover:opacity-0 group-hover:transform group-hover:-translate-x-2">demo</span>
-                      <span className="absolute top-0 right-0 w-full transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">view demo</span>
-                    </div>
-                  </Link>
-
-                  {/* Down Arrow */}
-                  <div className="animate-bounce mx-2">
-                    <ArrowRight className="w-6 h-6 text-white/70 rotate-90 mr-3" />
-                  </div>
-
-                  {/* Reports Button */}
-                  <Link 
-                    href="/dashboard"
-                    className="group text-xs sm:text-sm font-medium tracking-wider transition-all duration-300 hover:scale-105 text-white/80 hover:text-white"
-                    style={{ 
-                      fontFamily: 'Major Mono Display, monospace',
-                      letterSpacing: '0.1em'
-                    }}
-                  >
-                    <div className="relative w-24 text-center">
-                      <span className="block transition-all duration-300 group-hover:opacity-0 group-hover:transform group-hover:-translate-x-2">reports</span>
-                      <span className="absolute top-0 left-0 w-full transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">view reports</span>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            )}
-
-          </section>
-        ) : (
-          // Light Mode - Original Lottie Version
-          <section className="relative py-8 px-4 pt-8 min-h-screen flex items-center">
-            {/* Top Left Theme Toggle with Logo */}
-            {showTitle && (
-              <div className="absolute top-8 left-8 z-30 animate-fade-in-scale flex items-center gap-4">
                 <button
-                  onClick={toggleDarkMode}
-                  className="flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-all duration-300 hover:scale-105"
-                  aria-label="Toggle theme"
+                  onClick={() => setIsChatboxOpen(true)}
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                    isDarkMode 
+                      ? 'bg-lime-400 text-gray-900 hover:bg-lime-300' 
+                      : 'bg-lime-500 text-white hover:bg-lime-600'
+                  }`}
                 >
-                  <Moon className="w-4 h-4" />
+                  Try the helper bot
                 </button>
-                <h2 className="text-2xl sm:text-3xl font-bold text-red-500 tracking-wider">
-                  SCC
-                </h2>
-              </div>
-            )}
-
-            <div className="container mx-auto max-w-7xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-                {/* Left side - Text content */}
-                <div className="text-left lg:pl-20 order-2 lg:order-1 p-3">
-                  {showTitle && (
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight animate-zoom-in">
-                      Emergency route control
-                      <br className="hidden sm:block" />
-                      <span className="text-red-500"> for critical response</span>
-                    </h1>
-                  )}
-                  {showSubtitle && (
-                    <p className={`text-lg sm:text-xl md:text-xl mb-6 sm:mb-8 leading-relaxed animate-fade-in-up ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                      Made by team <span className="font-semibold text-red-500">ChocoLava</span> for advanced mapping and route optimization for emergency services.
-                      <br className="hidden sm:block" />
-                       Get ambulances and fire trucks to destinations faster with AI-powered routing.
-                    </p>
-                  )}
-                  {showButtons && (
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up">
-                      <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6" asChild>
-                        <Link href="/dashboard">View Reports</Link>
-                      </Button>
-                      <Button size="lg" variant="outline" className="border-red-500 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 font-semibold py-3 px-6" asChild>
-                        <Link href="/demo">View Demo</Link>
-                      </Button>
-                    </div>
-                  )}
-                </div>
-                
-                {/* Right side - Lottie animation */}
-                <div className="relative order-1 lg:order-2 mb-6 lg:mb-0">
-                  {showTitle && (
-                    <div className="lottie-container w-full flex justify-center animate-fade-in-scale">
-                      <Lottie
-                        animationData={landingAnimation}
-                        loop
-                        autoplay
-                        style={{ 
-                          width: '100%', 
-                          height: 'auto'
-                        }}
-                        className="max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px] w-full"
-                      />
-                    </div>
-                  )}
-                </div>
               </div>
             </div>
+          </header>
 
-            {/* Try Chatbox Button - Fixed position for light mode */}
-            {!isChatboxOpen && showMenu && (
-              <div className="fixed top-4 right-4 z-50 block animate-fade-in-scale">
-                <a 
-                  className="light-animated-button"
-                  href="#" 
-                  role="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsChatboxOpen(true);
-                  }}
-                >
-                  <span>Try Chatbox</span>
-                  <div className="icon">
-                    <RiSparkling2Line />
-                  </div>
-                </a>
+          {/* Hero Section */}
+          <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-lime-400/30 bg-lime-400/5 mb-8">
+                <span className={`text-xs font-medium ${isDarkMode ? 'text-lime-400' : 'text-lime-600'}`}>
+                  Starting Now in your city 🔥
+                </span>
+                <span className="px-3 py-0.5 rounded-full bg-lime-400 text-gray-900 text-xs font-bold">
+                  Check Out!
+                </span>
               </div>
-            )}
-          </section>
-        )}
 
+              {/* Main Heading */}
+              <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                CitySense For The CitiZens
+              </h1>
 
-      {/* Features Grid */}
-      <section className="py-8 sm:py-12 md:py-16 px-4" id="features">
-        <div className="container mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <Badge className="mb-4 bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
-              Emergency Features
-            </Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-              Saving lives through
-              <br className="hidden sm:block" />
-               faster response
-            </h2>
-            <p className={`text-base sm:text-lg max-w-2xl mx-auto px-4 sm:px-0 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-              Emergency services trust our platform to reduce response times 
-              and coordinate critical medical operations effectively.
-            </p>
-          </div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12 md:mb-16">
-            {stats.map((stat, index) => (
-              <Card key={index} className={`text-center ${isDarkMode ? "bg-gray-800 border-gray-700" : ""}`}>
-                <CardContent className="pt-4 sm:pt-6 p-3 sm:p-6">
-                  <stat.icon className="h-6 sm:h-7 md:h-8 w-6 sm:w-7 md:w-8 mx-auto mb-2 text-red-500" />
-                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1">{stat.value}</div>
-                  <div className={`text-xs sm:text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>{stat.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Additional Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12 md:mb-16">
-            {additionalStats.map((stat, index) => (
-              <Card key={index} className={`text-center ${isDarkMode ? "bg-gray-800 border-gray-700" : ""}`}>
-                <CardContent className="pt-4 sm:pt-6 p-3 sm:p-6">
-                  <stat.icon className="h-6 sm:h-7 md:h-8 w-6 sm:w-7 md:w-8 mx-auto mb-2 text-blue-500" />
-                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1">{stat.value}</div>
-                  <div className={`text-xs sm:text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>{stat.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-8 sm:py-12 md:py-16 px-4" id="solutions">
-        <div className="container mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <Badge className="mb-4 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-              Emergency Solutions
-            </Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Built for critical emergency
-              <br className="hidden sm:block" />
-               response
-            </h2>
-            <p className={`text-base sm:text-lg mt-4 max-w-2xl mx-auto px-4 sm:px-0 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-              Advanced mapping technology designed specifically for emergency services, 
-              with real-time coordination and intelligent route optimization.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className={`${feature.color} ${isDarkMode ? "bg-gray-800 border-gray-700" : ""} p-4 sm:p-6`}>
-                <CardHeader>
-                  <feature.icon className="h-8 sm:h-10 md:h-12 w-8 sm:w-10 md:w-12 mb-3 sm:mb-4 text-red-500" />
-                  <CardTitle className="text-lg sm:text-xl">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className={`text-sm sm:text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-8 sm:py-12 md:py-16 px-4" id="documentation">
-        <div className="container mx-auto max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
-          <div className="text-center mb-8 sm:mb-12">
-            <Badge className="mb-4 bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
-              FAQ
-            </Badge>
-            <h2 className="text-2xl sm:text-3xl font-bold">Frequently asked questions</h2>
-          </div>
-
-          <div className="space-y-4 sm:space-y-6">
-            {faqs.map((faq, index) => (
-              <Card key={index} className={`${isDarkMode ? "bg-gray-800 border-gray-700" : ""} p-4 sm:p-6`}>
-                <CardHeader className="p-0 pb-3 sm:pb-4">
-                  <CardTitle className="text-base sm:text-lg text-blue-600 dark:text-blue-400">
-                    {faq.question}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <p className={`text-sm sm:text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                    {faq.answer}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contacts Section */}
-      <section className="py-8 sm:py-12 md:py-16 px-4" id="contacts">
-        <div className="container mx-auto max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
-          <div className="text-center mb-8 sm:mb-12">
-            <Badge className="mb-4 bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
-              Emergency Contacts
-            </Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-              24/7 Emergency Support
-            </h2>
-            <p className={`text-base sm:text-lg max-w-2xl mx-auto px-4 sm:px-0 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-              Our emergency response team is available around the clock to assist 
-              with critical situations and system support.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
-
-            <Card className={`${isDarkMode ? "bg-gray-800 border-gray-700" : ""} p-4 sm:p-2`}>
-              <CardHeader>
-                <Building className="h-8 sm:h-10 md:h-12 w-8 sm:w-10 md:w-12 mb-3 sm:mb-4 text-blue-500" />
-                <CardTitle className="text-lg sm:text-xl">Operations Center</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-base sm:text-lg font-semibold mb-2">Emergency Operations HQ</p>
-                <p className={`text-sm sm:text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  SCC headquarters<br />
-                  Chandigarh City, Sector 17<br />
-                  Available 24/7 for coordination
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className={`${isDarkMode ? "bg-gray-800 border-gray-700" : ""} p-4 sm:p-2`}>
-              <CardHeader>
-                <Activity className="h-8 sm:h-10 md:h-12 w-8 sm:w-10 md:w-12 mb-3 sm:mb-4 text-green-500" />
-                <CardTitle className="text-lg sm:text-xl">Technical Support</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-base sm:text-lg font-semibold mb-2">24bcs11076@cuchd.in</p>
-                <p className={`text-sm sm:text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Technical support for system issues, training, and implementation assistance.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className={`${isDarkMode ? "bg-gray-800 border-gray-700" : ""} p-4 sm:p-2`}>
-              <CardHeader>
-                <Shield className="h-8 sm:h-10 md:h-12 w-8 sm:w-10 md:w-12 mb-3 sm:mb-4 text-purple-500" />
-                <CardTitle className="text-lg sm:text-xl">Emergency Services</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-base sm:text-lg font-semibold mb-2">+91-9041107458</p>
-                <p className={`text-sm sm:text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Direct line to emergency coordination team for dispatch and route optimization.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className={`border-t ${isDarkMode ? "border-gray-800 bg-gray-900" : "border-gray-200 bg-gray-50"} py-12`}>
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Shield className="h-6 w-6 text-red-500" />
-                <span className="font-bold">Smart City Copilot</span>
-              </div>
-              <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Advanced emergency route 
-                control and traffic optimization 
-                for critical response scenarios.
+              {/* Subheading */}
+              <p className={`text-lg md:text-xl mb-12 max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                Transforming urban chaos into coordinated intelligence — making cities not just smarter, but truly self-aware.
               </p>
+
+
+
+              {/* Feature Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                {/* AI Card */}
+                <div className={`relative p-8 rounded-2xl ${isDarkMode ? 'bg-gray-800/50 border border-gray-700/50' : 'bg-gray-50 border border-gray-200'} backdrop-blur-sm`}>
+                  <div className="mb-4">
+                    <div className={`w-16 h-16 mx-auto ${isDarkMode ? 'opacity-80' : 'opacity-90'}`}>
+                      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* AI Brain Icon */}
+                        <circle cx="32" cy="32" r="28" stroke="#8BC34A" strokeWidth="2" fill="none" opacity="0.3"/>
+                        <circle cx="32" cy="32" r="22" stroke="#8BC34A" strokeWidth="2" fill="none" opacity="0.5"/>
+                        <circle cx="32" cy="32" r="16" stroke="#8BC34A" strokeWidth="2" fill="none" opacity="0.7"/>
+                        <circle cx="32" cy="32" r="4" fill="#8BC34A"/>
+                        <line x1="32" y1="16" x2="32" y2="24" stroke="#8BC34A" strokeWidth="2"/>
+                        <line x1="32" y1="40" x2="32" y2="48" stroke="#8BC34A" strokeWidth="2"/>
+                        <line x1="16" y1="32" x2="24" y2="32" stroke="#8BC34A" strokeWidth="2"/>
+                        <line x1="40" y1="32" x2="48" y2="32" stroke="#8BC34A" strokeWidth="2"/>
+                        <line x1="21" y1="21" x2="26" y2="26" stroke="#8BC34A" strokeWidth="2"/>
+                        <line x1="38" y1="38" x2="43" y2="43" stroke="#8BC34A" strokeWidth="2"/>
+                        <line x1="43" y1="21" x2="38" y2="26" stroke="#8BC34A" strokeWidth="2"/>
+                        <line x1="26" y1="38" x2="21" y2="43" stroke="#8BC34A" strokeWidth="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className={`text-xl font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                    Artificial Intelligence
+                  </h3>
+                </div>
+
+                {/* IoT Card */}
+                <div className={`relative p-8 rounded-2xl ${isDarkMode ? 'bg-gray-800/50 border border-gray-700/50' : 'bg-gray-50 border border-gray-200'} backdrop-blur-sm`}>
+                  <div className="mb-4">
+                    <div className={`w-16 h-16 mx-auto ${isDarkMode ? 'opacity-80' : 'opacity-90'}`}>
+                      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* IoT Network Icon */}
+                        <circle cx="32" cy="12" r="4" fill="#00BCD4"/>
+                        <circle cx="12" cy="32" r="4" fill="#00BCD4"/>
+                        <circle cx="52" cy="32" r="4" fill="#00BCD4"/>
+                        <circle cx="20" cy="52" r="4" fill="#00BCD4"/>
+                        <circle cx="44" cy="52" r="4" fill="#00BCD4"/>
+                        <circle cx="32" cy="32" r="6" fill="#00BCD4"/>
+                        <line x1="32" y1="16" x2="32" y2="26" stroke="#00BCD4" strokeWidth="2"/>
+                        <line x1="16" y1="32" x2="26" y2="32" stroke="#00BCD4" strokeWidth="2"/>
+                        <line x1="38" y1="32" x2="48" y2="32" stroke="#00BCD4" strokeWidth="2"/>
+                        <line x1="28" y1="36" x2="22" y2="48" stroke="#00BCD4" strokeWidth="2"/>
+                        <line x1="36" y1="36" x2="42" y2="48" stroke="#00BCD4" strokeWidth="2"/>
+                        <circle cx="32" cy="32" r="10" stroke="#00BCD4" strokeWidth="1" opacity="0.3" strokeDasharray="2 2"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className={`text-xl font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                    Internet of Things
+                  </h3>
+                </div>
+
+                {/* Blockchain Card */}
+                <div className={`relative p-8 rounded-2xl ${isDarkMode ? 'bg-gray-800/50 border border-gray-700/50' : 'bg-gray-50 border border-gray-200'} backdrop-blur-sm`}>
+                  <div className="mb-4">
+                    <div className={`w-16 h-16 mx-auto ${isDarkMode ? 'opacity-80' : 'opacity-90'}`}>
+                      <svg width="48" height="48" viewBox="0 0 256 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                        <title>MetaMask</title>
+                        <g>
+                            <polygon fill="#E17726" points="250.066018 -8.89651791e-15 140.218553 81.2793133 160.645643 33.3787726"/>
+                            <polygon fill="#E27625" points="6.19062016 0.0955267053 95.3715526 33.38465 114.767923 81.9132784"/>
+                            <polygon fill="#E27625" points="205.859986 172.858026 254.410647 173.782023 237.442988 231.424252 178.200429 215.112736"/>
+                            <polygon fill="#E27625" points="50.1391619 172.857971 77.6964289 215.11288 18.5530579 231.425317 1.68846828 173.782036"/>
+                            <polygon fill="#E27625" points="112.130724 69.5516472 114.115388 133.635085 54.744344 130.933905 71.6319541 105.456448 71.8456974 105.210668"/>
+                            <polygon fill="#E27625" points="143.254237 68.8369186 184.153999 105.213392 184.365514 105.45719 201.253537 130.934656 141.89632 133.635226"/>
+                            <polygon fill="#E27625" points="79.4347776 173.043957 111.853145 198.302774 74.1951401 216.484384"/>
+                            <polygon fill="#E27625" points="176.57078 173.040009 181.701672 216.484523 144.149363 198.301203"/>
+                            <polygon fill="#D5BFB2" points="144.977922 195.921642 183.084879 214.373531 147.637779 231.220354 148.005818 220.085704"/>
+                            <polygon fill="#D5BFB2" points="111.01133 195.929982 108.102093 219.90359 108.340838 231.207237 72.8105145 214.373665"/>
+                            <polygon fill="#233447" points="100.007166 141.998856 109.965172 162.926822 76.0615945 152.995277"/>
+                            <polygon fill="#233447" points="155.991579 142.000941 180.049716 152.994594 146.03608 162.923638"/>
+                            <polygon fill="#CC6228" points="82.0263962 172.830401 76.5459821 217.870023 47.1731221 173.814952"/>
+                            <polygon fill="#CC6228" points="173.976111 172.8305 208.830462 173.815081 179.347016 217.871514"/>
+                            <polygon fill="#CC6228" points="202.112267 128.387342 176.746779 154.238424 157.190334 145.301352 147.82685 164.985265 141.688645 131.136429"/>
+                            <polygon fill="#CC6228" points="53.8753865 128.386879 114.309585 131.136429 108.17138 164.985265 98.8061425 145.303856 79.3525107 154.238823"/>
+                            <polygon fill="#E27525" points="52.165606 123.082486 80.8639084 152.203386 81.8584812 180.952278"/>
+                            <polygon fill="#E27525" points="203.863346 123.029784 174.117491 181.003017 175.237428 152.202737"/>
+                            <polygon fill="#E27525" points="112.906762 124.855691 114.061658 132.125682 116.915771 150.236518 115.080954 205.861884 106.405804 161.177486 106.402953 160.71542"/>
+                            <polygon fill="#E27525" points="143.077997 124.755417 149.599051 160.715451 149.596194 161.177486 140.899333 205.973714 140.55515 194.76913 139.198167 149.907127"/>
+                            <polygon fill="#F5841F" points="177.788479 151.045975 176.81718 176.023897 146.543342 199.61119 140.4233 195.28712 147.283427 159.951634"/>
+                            <polygon fill="#F5841F" points="78.3167053 151.046455 108.716464 159.952427 115.576437 195.28712 109.456385 199.611197 79.1807344 176.021881"/>
+                            <polygon fill="#C0AC9D" points="67.0180978 208.857597 105.750143 227.209502 105.586194 219.372868 108.826835 216.528328 147.160694 216.528328 150.518758 219.363342 150.271375 227.194477 188.757733 208.903978 170.030292 224.379509 147.384611 239.933315 108.516484 239.933315 85.8855503 224.315941"/>
+                            <polygon fill="#161616" points="142.203502 193.479367 147.679764 197.347701 150.888964 222.952494 146.244706 219.030957 109.769299 219.030957 105.213447 223.031398 108.317268 197.349663 113.795429 193.479367"/>
+                            <polygon fill="#763E1A" points="242.814251 2.24978946 256 41.8072765 247.765337 81.803692 253.629038 86.3274221 245.694407 92.3812097 251.657525 96.9865879 243.761206 104.178247 248.609106 107.688972 235.743366 122.714803 182.973386 107.350364 182.516079 107.105244 144.488982 75.0267414"/>
+                            <polygon fill="#763E1A" points="13.1860054 2.24978557 111.51151 75.0267402 73.4844118 107.105244 73.0271023 107.350365 20.2567388 122.714804 7.39121291 107.688927 12.2352706 104.180751 4.34251001 96.9865923 10.2945566 92.3862179 2.24133703 86.315099 8.32629691 81.7886671 -8.89651791e-15 41.8087534"/>
+                            <polygon fill="#F5841F" points="180.391638 103.990363 236.304873 120.269177 254.470245 176.254719 206.546445 176.25462 173.525532 176.671282 197.539657 129.863284"/>
+                            <polygon fill="#F5841F" points="75.6080363 103.990376 58.4568191 129.863284 82.4741865 176.671282 49.4693913 176.254719 1.63053271 176.254719 19.6938968 120.269548"/>
+                            <polygon fill="#F5841F" points="163.383898 33.1117385 147.744691 75.3505047 144.425852 132.411352 143.155934 150.295986 143.055195 195.983514 112.943788 195.983514 112.846176 150.381702 111.572114 132.395585 108.251786 75.3505047 92.6150854 33.1117385"/>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className={`text-xl font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                    Blockchain
+                  </h3>
+                </div>
+              </div>
             </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Features</h3>
-              <ul className={`space-y-2 text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                <li>Real-time Routing</li>
-                <li>Vehicle Tracking</li>
-                <li>Traffic Management</li>
-                <li>Emergency Analytics</li>
-              </ul>
+          </section>
+
+
+          {/* Features Section */}
+          <section className="py-16 px-6">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <Badge className={`mb-4 ${isDarkMode ? 'bg-blue-900/30 text-blue-300 border-blue-700' : 'bg-blue-100 text-blue-800'}`}>
+                  Emergency Solutions
+                </Badge>
+                <h2 className={`text-3xl md:text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  Built for critical emergency response
+                </h2>
+                <p className={`text-lg mt-4 max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Advanced mapping technology designed specifically for emergency services, 
+                  with real-time coordination and intelligent route optimization.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {features.map((feature, index) => (
+                  <Card key={index} className={`${isDarkMode ? 'bg-gray-800/50 border-gray-700/50 backdrop-blur-sm' : feature.color} p-6`}>
+                    <CardHeader>
+                      <feature.icon className={`h-12 w-12 mb-4 ${isDarkMode ? 'text-lime-400' : 'text-red-500'}`} />
+                      <CardTitle className={`text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                        {feature.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Solutions</h3>
-              <ul className={`space-y-2 text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                <li>Ambulance Services</li>
-                <li>Fire Departments</li>
-                <li>Police Operations</li>
-                <li>Rescue Operations</li>
-              </ul>
+          </section>
+
+          {/* Stats Section */}
+          <section className="py-16 px-6">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <Badge className={`mb-4 ${isDarkMode ? 'bg-red-900/30 text-red-300 border-red-700' : 'bg-red-100 text-red-800'}`}>
+                  Emergency Features
+                </Badge>
+                <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  Saving lives through faster response
+                </h2>
+                <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Emergency services trust our platform to reduce response times 
+                  and coordinate critical medical operations effectively.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                {stats.map((stat, index) => (
+                  <Card key={index} className={`text-center ${isDarkMode ? 'bg-gray-800/50 border-gray-700/50 backdrop-blur-sm' : 'bg-white'}`}>
+                    <CardContent className="pt-6">
+                      <stat.icon className={`h-8 w-8 mx-auto mb-2 ${isDarkMode ? 'text-lime-400' : 'text-red-500'}`} />
+                      <div className={`text-3xl font-bold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{stat.value}</div>
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{stat.label}</div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {additionalStats.map((stat, index) => (
+                  <Card key={index} className={`text-center ${isDarkMode ? 'bg-gray-800/50 border-gray-700/50 backdrop-blur-sm' : 'bg-white'}`}>
+                    <CardContent className="pt-6">
+                      <stat.icon className={`h-8 w-8 mx-auto mb-2 ${isDarkMode ? 'text-blue-400' : 'text-blue-500'}`} />
+                      <div className={`text-3xl font-bold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{stat.value}</div>
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{stat.label}</div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Support</h3>
-              <ul className={`space-y-2 text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                <li>Documentation</li>
-                <li>24/7 Emergency Support</li>
-                <li>Training & Onboarding</li>
-                <li>System Status</li>
-              </ul>
-            </div>
-          </div>
+          </section>
+
           
-          <div className={`border-t ${isDarkMode ? "border-gray-800" : "border-gray-200"} mt-8 pt-8 flex flex-col md:flex-row justify-between items-center`}>
-            <div className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-              © 2024 EmergencyRoute. All rights reserved.
+
+          {/* FAQ Section */}
+          <section className="py-16 px-6">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <Badge className={`mb-4 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-gray-300' : 'bg-gray-100 text-gray-800'}`}>
+                  FAQ
+                </Badge>
+                <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Frequently asked questions</h2>
+              </div>
+
+              <div className="space-y-6">
+                {faqs.map((faq, index) => (
+                  <Card key={index} className={`${isDarkMode ? 'bg-gray-800/50 border-gray-700/50 backdrop-blur-sm' : 'bg-white'} p-6`}>
+                    <CardHeader className="p-0 pb-4">
+                      <CardTitle className={`text-lg ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+                        {faq.question}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                        {faq.answer}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className={`text-sm hover:text-red-500 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Privacy Policy
-              </a>
-              <a href="#" className={`text-sm hover:text-red-500 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Terms of Service
-              </a>
-              <a href="#" className={`text-sm hover:text-red-500 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Emergency Protocols
-              </a>
+          </section>
+
+          {/* Contact Section */}
+          <section className="py-16 px-6">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <Badge className={`mb-4 ${isDarkMode ? 'bg-red-900/30 text-red-300 border-red-700' : 'bg-red-100 text-red-800'}`}>
+                  Emergency Contacts
+                </Badge>
+                <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  24/7 Emergency Support
+                </h2>
+                <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Our emergency response team is available around the clock to assist 
+                  with critical situations and system support.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className={`${isDarkMode ? 'bg-gray-800/50 border-gray-700/50 backdrop-blur-sm' : 'bg-white'} p-6`}>
+                  <CardHeader>
+                    <Building className={`h-12 w-12 mb-4 ${isDarkMode ? 'text-blue-400' : 'text-blue-500'}`} />
+                    <CardTitle className={`text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Operations Center</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Emergency Operations HQ</p>
+                    <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      SCC headquarters<br />
+                      Chandigarh City, Sector 17<br />
+                      Available 24/7 for coordination
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className={`${isDarkMode ? 'bg-gray-800/50 border-gray-700/50 backdrop-blur-sm' : 'bg-white'} p-6`}>
+                  <CardHeader>
+                    <Activity className={`h-12 w-12 mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-500'}`} />
+                    <CardTitle className={`text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Support</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>24bcs11076@cuchd.in</p>
+                    <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Technical support for system issues, training, and implementation assistance.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className={`${isDarkMode ? 'bg-gray-800/50 border-gray-700/50 backdrop-blur-sm' : 'bg-white'} p-6`}>
+                  <CardHeader>
+                    <Shield className={`h-12 w-12 mb-4 ${isDarkMode ? 'text-purple-400' : 'text-purple-500'}`} />
+                    <CardTitle className={`text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Emergency Services</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>+91-9041107458</p>
+                    <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Direct line to emergency coordination team for dispatch and route optimization.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
-          </div>
+          </section>
+
+          {/* Footer */}
+          <footer className={`border-t ${isDarkMode ? 'border-gray-800 bg-gray-900/50' : 'border-gray-200 bg-gray-50'} py-12 px-6`}>
+            <div className="max-w-7xl mx-auto">
+              <div className="grid md:grid-cols-4 gap-8">
+                <div>
+                  <div className="flex items-center space-x-2 mb-4">
+                    <Shield className={`h-6 w-6 ${isDarkMode ? 'text-lime-400' : 'text-red-500'}`} />
+                    <span className={`font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Smart City Copilot</span>
+                  </div>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    Advanced emergency route 
+                    control and traffic optimization 
+                    for critical response scenarios.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className={`font-semibold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Features</h3>
+                  <ul className={`space-y-2 text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    <li>Real-time Routing</li>
+                    <li>Vehicle Tracking</li>
+                    <li>Traffic Management</li>
+                    <li>Emergency Analytics</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className={`font-semibold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Solutions</h3>
+                  <ul className={`space-y-2 text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    <li>Ambulance Services</li>
+                    <li>Fire Departments</li>
+                    <li>Police Operations</li>
+                    <li>Rescue Operations</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className={`font-semibold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Support</h3>
+                  <ul className={`space-y-2 text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    <li>Documentation</li>
+                    <li>24/7 Emergency Support</li>
+                    <li>Training & Onboarding</li>
+                    <li>System Status</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className={`border-t ${isDarkMode ? 'border-gray-800' : 'border-gray-200'} mt-8 pt-8 flex flex-col md:flex-row justify-between items-center`}>
+                <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  © 2024 EmergencyRoute. All rights reserved.
+                </div>
+                <div className="flex space-x-6 mt-4 md:mt-0">
+                  <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-lime-400' : 'text-gray-600 hover:text-red-500'}`}>
+                    Privacy Policy
+                  </a>
+                  <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-lime-400' : 'text-gray-600 hover:text-red-500'}`}>
+                    Terms of Service
+                  </a>
+                  <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-lime-400' : 'text-gray-600 hover:text-red-500'}`}>
+                    Emergency Protocols
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
         </div>
-      </footer>
-    </div>
-    
-    {/* Chatbox Sidebar */}
-    <SidebarSync isOpen={isChatboxOpen} />
-    <AppSidebar selectedLocation="Chandigarh" side="right" className="block" />
-    
+      </div>
+      
+      {/* Chatbox Sidebar */}
+      <AppSidebar selectedLocation="Chandigarh" side="right" className="block" />
     </SidebarProvider>
-    </PageLoader>
   )
 }

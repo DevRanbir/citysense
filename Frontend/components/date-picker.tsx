@@ -73,11 +73,8 @@ export default function DatePicker({
           const presets = generateDatePresets(range.earliestDate, range.latestDate);
           setDatePresets(presets);
           
-          // Set initial date to the most recent available data range
-          const defaultPreset = presets.find(p => p.range !== null);
-          if (defaultPreset && defaultPreset.range) {
-            setDate(defaultPreset.range);
-          }
+          // DON'T set initial date - let user choose to apply filters manually
+          // This ensures page loads with live feed by default
         }
       } catch (error) {
         console.error('Error fetching available date range:', error);
